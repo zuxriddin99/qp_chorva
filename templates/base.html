@@ -1,10 +1,106 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Roboto:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-$END$
+<section class="main">
+    <header>
+        <div class="container">
+            <nav class='header-nav d-flex align-items-center'>
+                <img src="{% static 'img/logo/logo.png' %}" alt="" class="logo">
+                <ul class='menu d-flex justify-content-between align-items-center'>
+                    {% block menu %} {% endblock %}
+
+
+                </ul>
+                <button class='menu-btn'><a href="{% url 'partner' %}">ПАРТНЁРАМ</a></button>
+                <ul class='lang'>
+                    <li>
+                        RU<i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </li>
+                </ul>
+
+            </nav>
+            <!--Стиль header везде одинакова-->
+
+        </div>
+        <a href="#"><img src="{% static 'img/logo/logo.png' %}" alt="" class="mob-logo"></a>
+        <div class="gamburger">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="menu-exit">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+    </header>
+    <!-- Шапка сайта -->
+    {% block header %}
+
+    {% endblock %}
+    <!--Описания компания-->
+</section>
+{% block mainblog %}
+
+{% endblock %}
+
+<!--Блок контакты-->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-2 offset-1 col-md-2 d-flex align-items-center flex-column">
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="{% static 'img/logo/footer-logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="footer-label">
+                    QO’SHKO’PIR
+                    PARRANDA
+                </div>
+                <div class="footer-date">2004 - 2020</div>
+            </div>
+            <div class="col-2 offset-2 col-md-2 offset-md-2 d-flex align-items-center flex-column">
+                <nav class='footer-menu'>
+                    <ul>
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="{% url 'catalog' %}">Каталог</a></li>
+                        <li><a href="{% url 'about' %}">О компании</a></li>
+                        <li><a href="{% url 'contact' %}">Контакты</a></li>
+                        <li><a href="{% url 'partner' %}">Партнёрам</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-3 offset-2 col-md-3 offset-md-2 d-flex align-items-end flex-column">
+                <div class="footer-sot">
+                    <span>Мы в соц. сетях:</span>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer-phone">
+                    Наш телефон:
+                </div>
+                <div class="footer-tel">
+                    Тел: (+99890)737-00-01
+                </div>
+                <div class="footer-end">
+                    Все права защищены
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer сайта-->
+<script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
