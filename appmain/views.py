@@ -9,3 +9,4 @@ from .models import *
 class AboutCompanyView(ListView):
     queryset = AboutCompany.objects.filter(show=True)
     template_name = 'about.html'
+    context_object_name = 'aboutpage'
