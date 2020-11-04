@@ -1,0 +1,503 @@
+.catalog
+    position: relative
+    background: url('../img/bg/catalog-bg.png') center center/cover no-repeat
+    background-size: 100% 1000px
+    height: 1000px
+    &-descr
+        font-style: normal
+        font-weight: normal
+        font-size: 26px
+        line-height: 122.2%
+        color: #FAFAFE
+        margin-top: 30px
+    &-icons
+        display: flex
+        margin-top: 160px
+        list-style: none
+        padding: 0
+        align-items: flex-end 
+        justify-content: flex-end
+        flex-direction: column
+        li
+            display: flex
+            align-items: flex-end
+            margin: 25px 0
+            a
+                color: #fff
+                font-size: 24px
+    &-btn
+        button
+            margin-top: 100px
+            border: none
+            background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+            border-radius: 50px
+            width: 400px
+            height: 80px
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            color: #FFFBF7
+
+.sell
+    margin-top: 100px
+    &-title
+        text-align: center
+        font-family: Josefin Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 40px
+        color: #232323
+    &-block
+        margin-top: 80px
+        background: url('../img/catalog-circle.png') center no-repeat
+        background-size: 500px 500px
+        background-position: 300px 75px
+        .block-item
+            margin-bottom: 60px
+            width: 100%
+            height: 300px
+            padding: 30px 50px
+        .block-title
+            font-family: Josefin Sans
+            font-style: normal
+            font-weight: bold
+            font-size: 28px
+            color: #FAFAFE
+
+        .block-list
+            display: flex
+            justify-content: space-between
+            margin-top: 30px
+            ul
+                list-style: none
+                li
+                    font-family: Roboto
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 20px
+                    color: #FAFAFE
+                    &::before
+                        content: ''
+                        display: inline-block
+                        width: 12px
+                        height: 2px
+                        background: #fff
+                        transform: translate(-3px , -4px)
+        .block-btn
+            margin-top: 20px
+            button
+                border: none
+                width: 70%
+                height: 60px
+                background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+                border-radius: 50px
+                font-family: Josefin Sans
+                font-style: normal
+                font-weight: 600
+                font-size: 20px
+                color: #FFFBF7
+.cow
+    margin-top: 200px
+    background: url('../img/bg/bg-cow.png') center center/cover no-repeat
+    background-size: 100% 1000px
+    height: 1000px
+    &-subtitle
+        margin-top: 300px
+        font-family: Josefin Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 36px
+        color: #FAFAFE
+    &-descr
+        margin-top: 50px
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        font-size: 28px
+        line-height: 122.2%
+        color: #FAFAFE
+    
+    &-btn
+        margin-top: 60px
+        button
+            border: none
+            height: 70px
+            width: 350px
+            background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+            border-radius: 50px
+            font-family: Josefin Sans
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            color: #FFFBF7
+
+@media screen and ( max-width:1199px)
+    .catalog
+        background-size: 100% 800px
+        height: 800px
+        .label
+            margin-top: 0px
+        &-descr
+            font-size: 24px
+            margin-top: 30px
+        &-icons
+            margin-top: 40px
+            padding: 0
+            flex-direction: column
+            li
+                margin: 25px 0
+                a
+                    font-size: 24px
+        &-btn
+            button
+                margin-top: 80px
+                width: 350px
+                height: 70px
+                font-size: 22px
+    .sell
+        margin-top: 80px
+        &-title
+            font-size: 36px
+        &-block
+            margin-top: 60px
+            background-size: 500px 500px
+            background-position: 210px 75px
+            .block-item
+                margin-bottom: 60px
+                width: 100%
+                height: 300px
+                padding: 30px 50px
+            .block-title
+                font-size: 26px
+
+            .block-list
+                margin-top: 30px
+                ul
+                    li
+                        font-size: 18px
+                        &::before
+                            width: 12px
+                            height: 2px
+                            transform: translate(-3px , -4px)
+            .block-btn
+                margin-top: 20px
+                button
+                    width: 70%
+                    height: 50px
+                    font-size: 18px
+    .cow
+        margin-top: 100px
+        background-size: 100% 800px
+        height: 800px
+        &-subtitle
+            margin-top: 200px
+            font-size: 32px
+        &-descr
+            margin-top: 40px
+            font-size: 24px
+        
+        &-btn
+            margin-top: 50px
+            button
+                border: none
+                height: 60px
+                width: 330px
+                font-size: 22px
+
+@media screen and ( max-width:991px)
+    .catalog
+        background-size: 100% 600px
+        height: 600px
+        .label
+            margin-top: 20px
+            font-size: 28px
+        &-descr
+            font-size: 20px
+            margin-top: 20px
+        &-icons
+            margin-top: 40px
+            padding: 0
+            flex-direction: column
+            li
+                margin: 15px 0
+                a
+                    font-size: 22px
+        &-btn
+            button
+                margin-top: 80px
+                width: 250px
+                height: 60px
+                font-size: 18px
+    .sell
+        margin-top: 60px
+        &-title
+            font-size: 30px
+        &-block
+            margin-top: 40px
+            background-size: 350px 350px
+            background-position: 170px 60px
+            .block-item
+                margin-bottom: 30px
+                width: 100%
+                height: 225px
+                padding: 30px 30px
+            .block-title
+                font-size: 22px
+
+            .block-list
+                margin-top: 20px
+                ul
+                    li
+                        font-size: 14px
+                        &::before
+                            width: 12px
+                            height: 2px
+                            transform: translate(-3px , -4px)
+            .block-btn
+                margin-top: 10px
+                button
+                    width: 60%
+                    height: 40px
+                    font-size: 14px
+    .cow
+        margin-top: 80px
+        background-size: 100% 600px
+        height: 600px
+        &-subtitle
+            margin-top: 150px
+            font-size: 24px
+        &-descr
+            margin-top: 20px
+            font-size: 18px
+        
+        &-btn
+            margin-top: 60px
+            button
+                border: none
+                height: 50px
+                width: 260px
+                font-size: 18px
+
+@media screen and ( max-width:767px)
+    .catalog
+        background-size: 100% 400px
+        height: 400px
+        .label
+            margin-top: 80px
+            font-size: 24px
+        &-descr
+            font-size: 14px
+            margin-top: 20px
+        &-icons
+            margin-top: 100px
+            padding: 0
+            flex-direction: column
+            li
+                margin: 5px 0
+                a
+                    font-size: 22px
+        &-btn
+            button
+                margin-top: 40px
+                width: 180px
+                height: 50px
+                font-size: 14px
+    .sell
+        margin-top: 60px
+        &-title
+            font-size: 34px
+        &-block
+            margin-top: 40px
+            background: none
+            .block-item
+                margin-bottom: 30px
+                width: 100%
+                height: 300px
+                padding: 50px 60px
+            .block-title
+                font-size: 24px
+
+            .block-list
+                margin-top: 20px
+                ul
+                    li
+                        font-size: 18px
+                        &::before
+                            width: 12px
+                            height: 2px
+                            transform: translate(-3px , -4px)
+            .block-btn
+                margin-top: 30px
+                button
+                    width: 70%
+                    height: 60px
+                    font-size: 18px
+    .cow
+        margin-top: 60px
+        background-size: 100% 400px
+        height: 400px
+        &-subtitle
+            margin-top: 100px
+            font-size: 20px
+        &-descr
+            margin-top: 10px
+            font-size: 14px
+        
+        &-btn
+            margin-top: 20px
+            button
+                border: none
+                height: 40px
+                width: 200px
+                font-size: 14px
+
+@media screen and ( max-width:525px)
+    .catalog
+        background-size: 100% 400px
+        height: 400px
+        .label
+            margin-top: 80px
+            font-size: 22px
+        &-descr
+            font-size: 12px
+            margin-top: 20px
+        &-icons
+            margin-top: 100px
+            padding: 0
+            flex-direction: column
+            li
+                margin: 5px 0
+                a
+                    font-size: 18px
+        &-btn
+            button
+                margin-top: 40px
+                width: 150px
+                height: 40px
+                font-size: 12px
+    .sell
+        margin-top: 60px
+        &-title
+            font-size: 32px
+        &-block
+            margin-top: 30px
+            background: none
+            .block-item
+                margin-bottom: 30px
+                width: 100%
+                height: 300px
+                padding: 50px 40px
+            .block-title
+                font-size: 22px
+
+            .block-list
+                margin-top: 20px
+                ul
+                    li
+                        font-size: 18px
+                        &::before
+                            width: 12px
+                            height: 2px
+                            transform: translate(-3px , -4px)
+            .block-btn
+                margin-top: 30px
+                button
+                    width: 70%
+                    height: 50px
+                    font-size: 16px
+    .cow
+        margin-top: 40px
+        background-size: 100% 400px
+        height: 400px
+        &-subtitle
+            margin-top: 120px
+            font-size: 16px
+        &-descr
+            margin-top: 10px
+            font-size: 12px
+        
+        &-btn
+            margin-top: 20px
+            button
+                border: none
+                height: 40px
+                width: 150px
+                font-size: 12px
+
+@media screen and ( max-width:410px)
+    .catalog
+        background-size: 100% 300px
+        height: 300px
+        .label
+            margin-top: 70px
+            font-size: 18px
+        &-descr
+            font-size: 10px
+            margin-top: 20px
+        .offset-5
+            margin-left: 113px    
+        &-icons
+            margin-top: 70px
+            padding: 0
+            flex-direction: column
+            li
+                margin: 0 0
+                a
+                    font-size: 14px
+        &-btn
+            button
+                margin-top: 40px
+                width: 120px
+                height: 30px
+                font-size: 10px
+    .sell
+        margin-top: 40px
+        &-title
+            font-size: 24px
+        &-block
+            margin-top: 20px
+            background: none
+            .block-item
+                margin-bottom: 20px
+                width: 100%
+                height: 220px
+                padding: 30px 30px
+            .block-title
+                font-size: 18px
+
+            .block-list
+                margin-top: 20px
+                ul
+                    li
+                        font-size: 12px
+                        &::before
+                            width: 8px
+                            height: 2px
+                            transform: translate(-3px , -4px)
+            .block-btn
+                margin-top: 20px
+                button
+                    width: 60%
+                    height: 40px
+                    font-size: 12px
+    .cow
+        margin-top: 40px
+        background-size: 100% 300px
+        height: 300px
+        &-subtitle
+            margin-top: 80px
+            font-size: 12px
+        &-descr
+            margin-top: 10px
+            font-size: 8px
+        
+        &-btn
+            margin-top: 20px
+            button
+                border: none
+                height: 30px
+                width: 100px
+                font-size: 8px

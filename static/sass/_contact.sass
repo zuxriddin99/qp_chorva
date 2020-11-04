@@ -1,0 +1,478 @@
+.contacts
+    position: relative
+    background: url('../img/bg/contact-bg.png') center center/cover no-repeat
+    background-size: 100% 1000px
+    height: 1000px
+    &-label
+        margin-top: 120px
+        font-family: Josefin Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 44px
+        color: #FAFAFE
+    &-descr
+        font-style: normal
+        font-weight: normal
+        font-size: 26px
+        line-height: 122.2%
+        color: #FAFAFE
+        margin-top: 30px
+    &-icons
+        display: flex
+        margin-top: 120px
+        list-style: none
+        padding: 0
+        align-items: flex-end 
+        justify-content: flex-end
+        flex-direction: column
+        li
+            display: flex
+            align-items: flex-end
+            margin: 25px 0
+            a
+                color: #fff
+                font-size: 24px
+    &-btn
+        button
+            margin-top: 100px
+            border: none
+            background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+            border-radius: 50px
+            width: 400px
+            height: 80px
+            font-style: normal
+            font-weight: 500
+            font-size: 24px
+            color: #FFFBF7
+    &-form
+        form
+            margin-top: 30px
+            input
+                border: none
+                background: none
+                border-bottom: 4px solid rgba(250, 250, 250, 0.7)
+                width: 100%
+                color: #fff
+                margin-bottom: 50px
+                font-size: 20px
+                &::placeholder
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 16px
+                    color: #FFFFFF
+                &:focus
+                    background: none
+                    color: #fff
+                    box-shadow: inset 0 -1px 0 #ffffff
+            button
+                margin-top: 20px
+                border: none
+                background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+                border-radius: 50px
+                width: 90%
+                height: 60px
+
+.sotru
+    margin-top: 100px
+    &-title
+        text-align: center
+        font-family: Josefin Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 48px
+        line-height: 48px
+        color: #232323 
+    &-blocks
+        margin-top: 50px
+        .block-item
+            height: 260px
+            padding: 25px
+            margin-top: 50px
+        .block-icons
+            display: flex
+            justify-content: space-between
+            img
+                margin-top: 20px
+                width: 75px
+                height: 75px
+        .block-text
+            margin-top: 30px
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 22px
+            line-height: 122.2%
+            color: #FAFAFE
+            word-break: break-word
+
+.map
+    margin-top: 100px
+    &-title
+        text-align: center
+        font-family: Josefin Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 48px
+        line-height: 48px
+        color: #232323 
+    &-img
+        position: relative
+        margin-top: 50px
+        width: 100%
+        height: 700px
+        button
+            border: none
+            width: 336px
+            height: 49px
+            background: linear-gradient(174.86deg, #F33838 40.43%, #FF7800 113.02%)
+            border-radius: 50px
+            font-family: Roboto
+            font-style: normal
+            font-weight: normal
+            font-size: 24px
+            line-height: 122.2%
+            color: #FAFAFE
+            position: absolute
+            bottom: 50px
+            left: 50px
+
+@media screen and ( max-width:1199px)
+    .contacts
+        background-size: 100% 800px
+        height: 800px
+        &-label
+            margin-top: 80px
+            font-size: 36px
+        &-descr
+            font-size: 22px
+            margin-top: 30px
+        &-icons
+            margin-top: 70px
+            li
+                margin: 20px 0
+                a
+                    font-size: 24px
+        &-form
+            form
+                margin-top: 20px
+                input
+                    margin-bottom: 40px
+                    font-size: 20px
+                    &::placeholder
+                        font-size: 14px
+                button
+                    margin-top: 20px
+                    width: 90%
+                    height: 50px
+                    font-size: 18px
+    
+    .sotru
+        margin-top: 80px
+        &-title
+            font-size: 44px
+        &-blocks
+            margin-top: 40px
+            .block-item
+                height: 220px
+                padding: 25px 15px
+                margin-top: 40px
+            .block-icons
+                img
+                    margin-top: 10px
+                    width: 60px
+                    height: 60px
+            .block-text
+                margin-top: 30px
+                font-size: 18px
+    
+    .map
+        margin-top: 80px
+        &-title
+            font-size: 40px
+        &-img
+            margin-top: 40px
+            width: 100%
+            height: 600px
+            button
+                width: 306px
+                height: 49px
+                font-size: 20px
+                bottom: 50px
+                left: 50px
+
+@media screen and ( max-width:991px)
+    .contacts
+        background-size: 100% 600px
+        height: 600px
+        &-label
+            margin-top: 60px
+            font-size: 24px
+        &-descr
+            font-size: 18px
+            margin-top: 30px
+        &-icons
+            margin-top: 50px
+            li
+                margin: 20px 0
+                a
+                    font-size: 24px
+        &-form
+            form
+                margin-top: 0px
+                input
+                    margin-bottom: 30px
+                    font-size: 18px
+                    border-bottom: 3px solid rgba(250, 250, 250, 0.7)
+                    &::placeholder
+                        font-size: 14px
+                button
+                    margin-top: 20px
+                    width: 90%
+                    height: 40px
+                    font-size: 14px
+    
+    .sotru
+        margin-top: 60px
+        &-title
+            font-size: 36px
+        &-blocks
+            margin-top: 20px
+            .block-item
+                height: 160px
+                padding: 20px 15px
+                margin-top: 40px
+            .block-icons
+                img
+                    margin-top: 0px
+                    width: 50px
+                    height: 50px
+            .block-text
+                margin-top: 20px
+                font-size: 14px
+    
+    .map
+        margin-top: 60px
+        &-title
+            font-size: 36px
+        &-img
+            margin-top: 20px
+            width: 100%
+            height: 420px
+            button
+                width: 250px
+                height: 40px
+                font-size: 16px
+                bottom: 30px
+                left: 50px
+
+@media screen and ( max-width:767px)
+    .contacts
+        background-size: 100% 400px
+        height: 400px
+        &-label
+            margin-top: 70px
+            font-size: 20px
+        &-descr
+            font-size: 14px
+            margin-top: 20px
+        &-icons
+            margin-top: 10px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+
+            li
+                margin: 0px 0
+                a
+                    font-size: 24px
+        &-form
+            form
+                margin-top: 0px
+                input
+                    margin-bottom: 10px
+                    font-size: 14px
+                    border-bottom: 2px solid rgba(250, 250, 250, 0.7)
+                    &::placeholder
+                        font-size: 14px
+                button
+                    margin-top: 10px
+                    width: 80%
+                    height: 40px
+                    font-size: 14px
+    
+    .sotru
+        margin-top: 60px
+        &-title
+            font-size: 36px
+        &-blocks
+            margin-top: 20px
+            .block-item
+                height: 160px
+                padding: 20px 15px
+                margin-top: 40px
+            .block-icons
+                img
+                    margin-top: 0px
+                    width: 50px
+                    height: 50px
+            .block-text
+                margin-top: 20px
+                font-size: 14px
+    
+    .map
+        margin-top: 60px
+        &-title
+            font-size: 36px
+        &-img
+            margin-top: 20px
+            width: 100%
+            height: 420px
+            button
+                width: 250px
+                height: 40px
+                font-size: 16px
+                bottom: 30px
+                left: 50px
+
+@media screen and ( max-width:576px)
+    .contacts
+        background-size: 100% 400px
+        height: 400px
+        &-label
+            margin-top: 70px
+            font-size: 18px
+        &-descr
+            font-size: 12px
+            margin-top: 20px
+        &-icons
+            margin-top: 10px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+
+            li
+                margin: 0px 0
+                a
+                    font-size: 20px
+        &-form
+            form
+                margin-top: 0px
+                input
+                    margin-bottom: 10px
+                    font-size: 12px
+                    border-bottom: 2px solid rgba(250, 250, 250, 0.7)
+                    &::placeholder
+                        font-size: 14px
+                button
+                    margin-top: 10px
+                    width: 80%
+                    height: 30px
+                    font-size: 12px
+    
+    .sotru
+        margin-top: 50px
+        &-title
+            font-size: 24px
+        &-blocks
+            margin-top: 20px
+            .block-item
+                height: 160px
+                padding: 20px 15px
+                margin-top: 30px
+            .block-icons
+                img
+                    margin-top: 0px
+                    width: 50px
+                    height: 50px
+            .block-text
+                margin-top: 20px
+                font-size: 14px
+    
+    .map
+        margin-top: 40px
+        &-title
+            font-size: 24px
+        &-img
+            margin-top: 20px
+            width: 100%
+            height: 330px
+            button
+                width: 150px
+                height: 30px
+                font-size: 12px
+                bottom: 20px
+                left: 20px
+
+@media screen and ( max-width:400px)
+    .contacts
+        background-size: 100% 400px
+        height: 400px
+        &-label
+            margin-top: 70px
+            font-size: 14px
+        &-descr
+            font-size: 9px
+            margin-top: 12px
+        &-icons
+            margin-top: 30px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+
+            li
+                margin: 0px 0
+                a
+                    font-size: 20px
+        &-form
+            form
+                margin-top: 0px
+                input
+                    margin-bottom: 10px
+                    font-size: 10px
+                    border-bottom: 2px solid rgba(250, 250, 250, 0.7)
+                    &::placeholder
+                        font-size: 10px
+                button
+                    margin-top: 10px
+                    width: 80%
+                    height: 30px
+                    font-size: 8px
+    
+    .sotru
+        margin-top: 30px
+        &-title
+            font-size: 20px
+        &-blocks
+            margin-top: 0px
+            .block-item
+                height: 100px
+                padding: 15px 10px
+                margin-top: 30px
+            .block-icons
+                img
+                    margin-top: 0px
+                    width: 30px
+                    height: 30px
+            .block-text
+                margin-top: 10px
+                font-size: 10px
+    
+    .map
+        margin-top: 20px
+        &-title
+            font-size: 20px
+        &-img
+            margin-top: 0px
+            width: 100%
+            height: 200px
+            button
+                width: 120px
+                height: 20px
+                font-size: 10px
+                bottom: 20px
+                left: 10px
