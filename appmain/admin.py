@@ -28,3 +28,11 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ContactUs, ContactUsAdmin)
+
+
+class PartnerPageAmin(admin.ModelAdmin):
+    list_display = ('text',)
+    search_fields = ('text',)
+
+
+admin.site.register(PartnerPage, PartnerPageAmin)

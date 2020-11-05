@@ -13,8 +13,8 @@ class AboutPage(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = 'Add post about page'
-        verbose_name_plural = 'Add posts about page'
+        verbose_name = 'пост: о компании'
+        verbose_name_plural = 'посты:о компании'
         ordering = ['-created_date']
 
     def __str__(self):
@@ -28,8 +28,8 @@ class ContactPage(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = 'Add post contact page'
-        verbose_name_plural = 'Add posts contact page'
+        verbose_name = 'пост:контакт'
+        verbose_name_plural = 'посты:контакты'
         ordering = ['-created_date']
 
     def __str__(self):
@@ -43,14 +43,21 @@ class ContactUs(models.Model):
     date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name = 'contact us'
-        verbose_name_plural = 'contact us'
+        verbose_name = 'заявку'
+        verbose_name_plural = 'заявкы'
 
     def __str__(self):
         return self.name
 
 
-# class PartnerPage(models.Model):
-#     text = models.CharField(max_length=100,blank=True)
-#     image =
+class PartnerPage(models.Model):
+    text = models.CharField(max_length=100, blank=True)
+    image_background = models.ImageField(upload_to='partner_image')
+    image = models.ImageField(upload_to='partner_image', blank=True)
 
+    class Meta:
+        verbose_name = "пост:партнёр"
+        verbose_name_plural = "посты:партнёр"
+
+    def __str__(self):
+        return self.text
