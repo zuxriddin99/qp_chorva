@@ -13,6 +13,12 @@ class AboutCompanyView(ListView):
     context_object_name = 'aboutpage'
 
 
+class OurAdvantageView(ListView):
+    queryset = OurAdvantage.objects.all()
+    template_name = 'about.html'
+    context_object_name = 'advantage'
+
+
 class ContactPageView(ListView):
     queryset = ContactPage.objects.all()
     template_name = 'contact.html'

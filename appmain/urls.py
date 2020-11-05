@@ -11,5 +11,4 @@ urlpatterns = [
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('partner/', PartnerPageViews.as_view(), name='partner'),
     path('connection/', ContactUsView.as_view(), name='contactus')
-
 ]

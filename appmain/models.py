@@ -21,6 +21,19 @@ class AboutPage(models.Model):
         return self.title
 
 
+class OurAdvantage(models.Model):
+    text = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='about_page', blank=True, verbose_name='image')
+    image_2 = models.ImageField(upload_to='about_page', blank=True, verbose_name='images')
+
+    class Meta:
+        verbose_name = 'пост: наше преимущество'
+        verbose_name_plural = 'посты:наши преимущества'
+
+    def __str__(self):
+        return self.text
+
+
 class ContactPage(models.Model):
     """ post in contact page """
     text = models.CharField(max_length=250, blank=True)
