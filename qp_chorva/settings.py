@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -69,8 +70,6 @@ TEMPLATES = [
     },
 ]
 
-
-
 WSGI_APPLICATION = 'qp_chorva.wsgi.application'
 
 # Database
@@ -124,4 +123,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-#CONSTANCE_BACKEND = 'constance.backends.redisd.RedisBackend'
+# CONSTANCE_BACKEND = 'constance.backends.redisd.RedisBackend'
+MESSAGE_TAGS = {
+
+    messages.SUCCESS: 'alert-success',
+
+}

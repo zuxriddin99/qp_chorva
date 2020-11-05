@@ -3,6 +3,11 @@
 {% block title %}
     Контакты
 {% endblock %}
+
+{% block bg_image %}
+    contacts
+{% endblock %}
+
 {% block menu %}
     <li><a href="{% url 'index' %}">Главная</a></li>
     <li><a href="{% url 'about' %}">О компании</a></li>
@@ -37,18 +42,22 @@
             <div class="col-6 col-md-4 offset-md-1">
                 <div class="contacts-label">Оставьте заявку</div>
                 <div class="contacts-form">
-                    <form>
+                    <form action="{% url 'contactus' %}" method="post">
+                        {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" id='name' placeholder="Имя*">
+                            <input type="text" class="form-control" id='name' placeholder="Имя*" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id='tel' placeholder="Номер телефона*">
+                            <input type="number" class="form-control" id='tel' placeholder="Номер телефона*"
+                                   name="number">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id='message' placeholder="Сообщение*">
+                            <input type="text" class="form-control" id='message' placeholder="Сообщение*"
+                                   name="message">
                         </div>
                         <button type="submit" class="btn btn-primary">НАША ПРОДУКЦИЯ</button>
                     </form>
+
                 </div>
             </div>
             <div class="col-12 col-md-1 offset-md-1">
@@ -73,91 +82,36 @@
             </div>
             <div class="sotru-blocks">
                 <div class="row">
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background:  url({% static 'img/contact-block.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="{% static 'img/01.png' %}" alt="">
-                                <img src="{% static 'img/clock.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Сэкономите ваши деньги и время, а также нервы.
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background: url({% static 'img/contact-block.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="{% static 'img/02.png' %}" alt="">
-                                <img src="{% static 'img/clock.png' %}" alt="">
+                    {% for contact in contactpage %}
+                        <div class="col-6 col-md-4">
+                            <div class="block-item"
+                                 style='background: url({{ contact.image.url }}) center center/cover no-repeat;'>
+                                <div class="block-icons">
+                                    <img src="{% static 'img/02.png' %}" alt="">
+                                    <img src="{% static 'img/clock.png' %}" alt="">
 
-                            </div>
-                            <div class="block-text">
-                                Начнёте развиваться еще больше и эффективнее.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background: url(img/contact-block.png) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="img/03.png" alt="">
-                                <img src="img/collaboration.png" alt="">
-                            </div>
-                            <div class="block-text">
-                                Заключите с нами сделкуи мы станем партнерами
+                                </div>
+                                <div class="block-text">
+                                    Начнёте развиваться еще больше и эффективнее.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background: url(img/contact-block.png) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="img/04.png" alt="">
-                                <img src="img/agreement.png" alt="">
-                            </div>
-                            <div class="block-text">
-                                Получите доступный товар
-                                самого лучшего качества
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background: url(img/contact-block.png) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="img/05.png" alt="">
-                                <img src="img/partnership.png" alt="">
-                            </div>
-                            <div class="block-text">
-                                Получите дальнейшую почву для сотрудничества
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <div class="block-item"
-                             style='background: url(img/contact-block.png) center center/cover no-repeat;'>
-                            <div class="block-icons">
-                                <img src="img/06.png" alt="">
-                                <img src="img/money.png" alt="">
-                            </div>
-                            <div class="block-text">
-                                Окупите покупку в течениинеопределенного времени
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+
+
                 </div>
             </div>
         </div>
     </section>
+
     <section class="map">
         <div class="container">
             <div class="map-title">
                 Мы находимся
             </div>
-            <div class="map-img" style="background: url(img/map.png) center center/cover no-repeat;">
+
+            <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">
                 <button>Открыть в яндекс карте</button>
             </div>
         </div>

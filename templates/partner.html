@@ -3,8 +3,13 @@
 {% block title %}
     Партнёрам
 {% endblock %}
+
+{% block bg_image %}
+    partner
+{% endblock %}
+
 {% block menu %}
-    <li ><a href="{% url 'index' %}">Главная</a></li>
+    <li><a href="{% url 'index' %}">Главная</a></li>
     <li><a href="{% url 'about' %}">О компании</a></li>
     <li><a href="{% url 'catalog' %}">Каталог</a></li>
     <li><a href="{% url 'contact' %}">Контакты</a></li>
@@ -50,7 +55,7 @@
             </div>
             <div class="benefits-blocks">
                 <div class="row">
-                    <div class="col-6 col-md-3">
+                    <div style="margin-bottom: 2px" class="col-6 col-md-3">
                         <div class="block-item"
                              style='background: url({% static 'img/partner-block.png' %}) center center/cover no-repeat;'>
                             <div class="block-icon">
@@ -60,7 +65,7 @@
                                 Лучшая цена
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <div class="col-6 col-md-3">
                         <div class="block-item"
                              style='background: url({% static 'img/partner-block.png' %}) center center/cover no-repeat;'>
@@ -71,7 +76,7 @@
                                 Известный бренд
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <div class="col-6 col-md-3">
                         <div class="block-item"
                              style='background: url({% static 'img/partner-block.png' %}) center center/cover no-repeat;'>
@@ -82,10 +87,10 @@
                                 Стабильные поставки
                             </div>
                         </div>
-                    </div>
+                    </div><br>
                     <div class="col-6 col-md-3">
                         <div class="block-item"
-                             style='background: url({% static 'img/partner-block.png'%}) center center/cover no-repeat;'>
+                             style='background: url({% static 'img/partner-block.png' %}) center center/cover no-repeat;'>
                             <div class="block-icon">
                                 <img src="{% static 'img/agreement.png' %}" alt="">
                             </div>
@@ -93,7 +98,18 @@
                                 Индивидуальный подход
                             </div>
                         </div>
-                    </div>
+                    </div><br>
+                    <div class="col-6 col-md-3">
+                        <div class="block-item"
+                             style='background: url({% static 'img/partner-block.png' %}) center center/cover no-repeat;'>
+                            <div class="block-icon">
+                                <img src="{% static 'img/agreement.png' %}" alt="">
+                            </div>
+                            <div class="block-text">
+                                Индивидуальный подход
+                            </div>
+                        </div>
+                    </div><br>
                 </div>
             </div>
         </div>

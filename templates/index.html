@@ -4,6 +4,10 @@
     Главная
 {% endblock %}
 
+{% block bg_image %}
+    main
+{% endblock %}
+
 {% block menu %}
     <li class='activ'><a href="{% url 'index' %}">Главная</a></li>
     <li><a href="{% url 'about' %}">О компании</a></li>

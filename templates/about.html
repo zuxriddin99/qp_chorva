@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
+
 {% load static tags %}
+
 {% block title %}
     О компании
 {% endblock %}
+
+{% block bg_image %}
+    company
+{% endblock %}
+
 {% block menu %}
     <li><a href="{% url 'index' %}">Главная</a></li>
     <li class='activ'><a href="{% url 'about' %}">О компании</a></li>
@@ -63,19 +70,19 @@
                             </div>
                             <div class="col-6 col-md-5 offset-md-1">
                                 <div class="history-title">
-                                    {{ ab.title}}
+                                    {{ ab.title }}
                                 </div>
                                 <div class="history-descr">
-                                    250 гектар выращивания (клевер, пшеница).
+                                    {{ ab.description }}
                                     <br>
-                                    <br>
-                                    Бараны в количестве 500 штук, ежегоднаяпродажа и выращивание 250-300 штук.
-                                    <br>
-                                    <br>
-                                    Рыба (озеро на 2 гектара).
-                                    <br>
-                                    <br>
-                                    Построили бассейн для рыб 27 гектар.
+                                    {#                                    <br>#}
+                                    {#                                    Бараны в количестве 500 штук, ежегоднаяпродажа и выращивание 250-300 штук.#}
+                                    {#                                    <br>#}
+                                    {#                                    <br>#}
+                                    {#                                    Рыба (озеро на 2 гектара).#}
+                                    {#                                    <br>#}
+                                    {#                                    <br>#}
+                                    {#                                    Построили бассейн для рыб 27 гектар.#}
                                 </div>
 
                             </div>
@@ -86,30 +93,30 @@
                         <div class="row d-flex align-items-center mt-3">
                             <div class="col-6 col-md-5">
                                 <div class="history-title">
-                                    2012-2014 года
+                                    {{ ab.title }}
                                 </div>
                                 <div class="history-descr">
-                                    Взяли 350 кур и из них сделали 30000 кур.
+                                    {{ ab.description }}
                                     <br>
-                                    <br>
-                                    Взяли 350 кур и из них сделали 30000 кур.
-                                    <br>
-                                    <br>
-                                    Рыба (озеро на 2 гектара).
-                                    <br>
-                                    <br>
-                                    150000 несущих кур.
+                                    {#                                    <br>#}
+                                    {#                                    Взяли 350 кур и из них сделали 30000 кур.#}
+                                    {#                                    <br>#}
+                                    {#                                    <br>#}
+                                    {#                                    Рыба (озеро на 2 гектара).#}
+                                    {#                                    <br>#}
+                                    {#                                    <br>#}
+                                    {#                                    150000 несущих кур.#}
                                 </div>
 
                             </div>
                             <div class="col-6 col-md-5 offset-md-2">
                                 <div class="history-sub-img"
-                                     style='background: url({% static 'img/history-img4.png' %}) center center/cover no-repeat;'>
+                                     style='background: url({{ ab.image.url }}) center center/cover no-repeat;'>
                                     <div class="bg">
                                     </div>
                                 </div>
                                 <div class="history-subimg2"
-                                     style='background: url({% static 'img/history-img3.png' %}) center center/cover no-repeat;'>
+                                     style='background: url({{ ab.image_background.url }}) center center/cover no-repeat;'>
                                     <div class="bg">
                                     </div>
                                 </div>
