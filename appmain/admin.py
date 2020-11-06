@@ -13,6 +13,14 @@ class AboutPageAdmin(admin.ModelAdmin):
 admin.site.register(AboutPage, AboutPageAdmin)
 
 
+class OurAdvantageAdmin(admin.ModelAdmin):
+    list_display = ('text',)
+    search_fields = ('text',)
+
+
+admin.site.register(OurAdvantage, OurAdvantageAdmin)
+
+
 class ContactPageAdmin(admin.ModelAdmin):
     list_display = ('text',)
     search_fields = ('text',)

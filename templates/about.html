@@ -164,65 +164,24 @@
             </div>
             <div class="advant-blocks">
                 <div class="row">
-                    <div class="col-4 col-md-4">
-                        <div class="block-item"
-                             style='background: url({% static 'img/egg.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icon">
-                                <img src="{% static 'img/logo/like.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Качество
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <div class="block-item"
-                             style='background: url({% static 'img/egg.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icon">
-                                <img src="{% static 'img/logo/brain.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Инновации
+                    {% for advant in advantage %}
+                        <div style="margin-bottom: 25px" class="col-4 col-md-4">
+                            <div class="block-item"
+                                 style='background: url({{ advant.image_2.url }}) center center/cover no-repeat;'>
+                                <div class="block-icon">
+                                    <img src="{{ advant.image }}" alt="">
+                                </div>
+                                <div class="block-text">
+                                    {{ advant.text }}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <div class="block-item"
-                             style='background: url({% static 'img/egg.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icon">
-                                <img src="{% static 'img/logo/shield.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Надёжность
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-4 offset-2 col-md-4 offset-md-2">
-                        <div class="block-item"
-                             style='background: url({% static 'img/egg.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icon">
-                                <img src="{% static 'img/logo/target.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Профессионализм
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-4">
-                        <div class="block-item"
-                             style='background: url({% static 'img/egg.png' %}) center center/cover no-repeat;'>
-                            <div class="block-icon">
-                                <img src="{% static 'img/logo/castle.png' %}" alt="">
-                            </div>
-                            <div class="block-text">
-                                Масштабность
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+
 
                 </div>
+
+
             </div>
         </div>
     </section>

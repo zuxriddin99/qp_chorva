@@ -12,11 +12,12 @@ class AboutCompanyView(ListView):
     template_name = 'about.html'
     context_object_name = 'aboutpage'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['advantage'] = OurAdvantage.objects.all()
 
-class OurAdvantageView(ListView):
-    queryset = OurAdvantage.objects.all()
-    template_name = 'about.html'
-    context_object_name = 'advantage'
+        # And so on for more models
+        return context
 
 
 class ContactPageView(ListView):
