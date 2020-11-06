@@ -3,6 +3,8 @@ from django.views.generic import ListView, CreateView
 
 from .forms import ContactUsFom
 from .models import *
+from django.shortcuts import render
+from constance import config
 
 
 # Create your views here.
@@ -38,3 +40,7 @@ class PartnerPageViews(ListView):
     queryset = PartnerPage.objects.all()
     template_name = 'partner.html'
     context_object_name = 'partnerpage'
+
+
+# def myview(request):
+#     return render(request, 'about.html', {'config': config})

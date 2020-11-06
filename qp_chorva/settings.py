@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
+from constance.signals import config_updated
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,13 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'constance',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'constance',
+
     'appmain',
 
 ]
@@ -62,10 +64,12 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+                'constance.context_processors.config',
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'appmain.context_processors.myview',
             ],
         },
     },
@@ -125,8 +129,49 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 CONSTANCE_BACKEND = 'constance.backends.redisd.RedisBackend'
-MESSAGE_TAGS = {
 
-    messages.SUCCESS: 'alert-success',
+CONSTANCE_REDIS_CONNECTION = {
+    'host': 'localhost',
+    'port': 6379,
+    'db': 0,
+}
+
+CONSTANCE_CONFIG = {
+
+    'MAIN_1': (
+        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
+        'лучшие на рынке среди наших конкурентов. ',
+        'Header text '),
+    'MAIN_2': ('НАША ПРОДУКЦИЯ', 'Header button'),
+    'MAIN_3': ('О нас', 'About us'),
+    'MAIN_4': (
+        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
+        'лучшие на рынке среди наших конкурентов.',
+        'about us text'),
+
+    'MAIN_6': ('Мы производим', 'button'),
+    'MAIN_7': ('ПРОДАЖУ ЯИЦ', 'button'),
+    'MAIN_8': ('УЗНАТЬ ПОДРОБНЕЕ', 'button'),
+    'MAIN_9': ('Наши контакты', 'contact'),
+    'MAIN_10': ('Банк: Хорезмский региональный филиал АК «УзПромстройбанка».', 'Bank info'),
+    'MAIN_11': ('Тел: (+99890)737-00-01.', 'Mobile number'),
+    'MAIN_12': ('Мы в соц. сетях:', 'Info social set'),
+    'MAIN_13': ('Все права защищены', 'last item'),
+    'MAIN_14': ('ПОДРОБНЕЕ', 'button'),
+}
+
+# CONSTANCE_CONFIG_FIELDSETS = {
+#     'MainPage': ('MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8',),
+#
+# }
+
+CONSTANCE_CONFIG_FIELDSETS = {
+    'Main page': {
+        'fields': (
+            'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9', 'MAIN_10',
+            'MAIN_11',
+            'MAIN_12', 'MAIN_13', 'MAIN_14'),
+        'collapse': True
+    },
 
 }
