@@ -37,7 +37,9 @@
             </div>
         </div>
         <div class="main-btn">
-            <button>{{ config.MAIN_2 }}</button>
+            <a href="{% url 'catalog' %}">
+                <button>{{ config.MAIN_2 }}</button>
+            </a>
         </div>
     </div>
 {% endblock %}
@@ -60,13 +62,15 @@
                 </div>
                 <div class="col-6 col-md-5 offset-md-1">
                     <div class="about-title">
-                        {{ config.MAIN_3}}
+                        {{ config.MAIN_3 }}
                     </div>
                     <div class="about-descr">
-                        {{ config.MAIN_4}}
+                        {{ config.MAIN_4 }}
                     </div>
                     <div class="about-btn">
-                            <button>{{ config.MAIN_14}}</button>
+                        <a href="{% url 'about' %}">
+                            <button>{{ config.MAIN_5 }}</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -76,47 +80,47 @@
     <section class='produce'>
         <div class="container">
             <div class="produce-title">
-                Мы производим
+                {{ config.MAIN_6 }}
             </div>
             <div class="row">
                 <div class="col-6 col-md-6">
                     <div class="produce-bigbtn">
-                        <button>ЭКСПОРТ И ИМПОРТ</button>
+                        <button>{{ config.MAIN_7 }}</button>
                     </div>
                 </div>
                 <div class="col-6 col-md-6">
                     <div class="produce-bigbtn">
-                        <button>ПРОДАЖУ ЯИЦ</button>
+                        <button>{{ config.MAIN_8 }}</button>
                     </div>
                 </div>
             </div>
             <div class="produce-btn">
-                <button>УЗНАТЬ ПОДРОБНЕЕ</button>
+                <button>{{ config.MAIN_9 }}</button>
             </div>
         </div>
     </section>
     <!--Произвоства-->
     <section class="contact">
         <div class="container">
-            <div class="contact-label">Наши контакты</div>
+            <div class="contact-label">{{ config.MAIN_10 }}</div>
             <div class="row d-flex align-items-center">
                 <div class="col-6 col-md-5">
                     <div class="contact-title">
-                        «QO’SHKO’PIR PARRANDA»
+                        «QO'SHKO'PIR PARRANDA»
                     </div>
                     <div class="contact-descr">
-                        Адрес: Республика Узбекистан, Хорезмская область, Кушкупирский  район
-                        село Узбекяп.
+                        {{ config.MAIN_11 }}
                         <br>
                         <br>
-                        Банк: Хорезмский региональный
-                        филиал АК «УзПромстройбанка».
+                        {{ config.MAIN_12 }}
                         <br>
                         <br>
-                        Тел: (+99890)737-00-01.
+                        {{ config.MAIN_13 }}
                     </div>
                     <div class="contact-btn">
-                        <button>ПОДРОБНЕЕ</button>
+                        <a href="{% url 'contact' %}">
+                            <button>{{ config.MAIN_5 }}</button>
+                        </a>
                     </div>
                 </div>
                 <div class="col-6 col-md-5 offset-md-2">

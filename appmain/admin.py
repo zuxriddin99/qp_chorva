@@ -2,7 +2,6 @@ from django.contrib import admin
 from collections import OrderedDict
 # Register your models here.
 from .models import *
-from constance.admin import ConstanceAdmin, ConstanceForm, Config
 
 
 class AboutPageAdmin(admin.ModelAdmin):
@@ -52,17 +51,3 @@ CONSTANCE_CONFIG = OrderedDict([
     ('THEME', ('light-blue', 'Website theme')),
 ])
 
-
-class CustomConfigForm(ConstanceForm):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        # ... do stuff to make your settings form nice ...
-
-
-class ConfigAdmin(ConstanceAdmin):
-    change_list_form = CustomConfigForm
-    change_list_template = 'admin/config/settings.html'
-
-
-admin.site.unregister([Config])
-admin.site.register([Config], ConfigAdmin)
