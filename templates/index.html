@@ -1,19 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-{{ config.TITLE_INDEX }}
+    {{ config.TITLE_INDEX }}
 {% endblock %}
 
 {% block bg_image %}
     main
 {% endblock %}
 
-{% block menu %}
-    <li class='activ'><a href="{% url 'index' %}">Главная</a></li>
-    <li><a href="{% url 'about' %}">О компании</a></li>
-    <li><a href="{% url 'catalog' %}">Каталог</a></li>
-    <li><a href="{% url 'contact' %}">Контакты</a></li>
-{% endblock %}
+
 <!-- Шапка сайта -->
 {% block header %}
     <div class="container">

@@ -28,6 +28,12 @@ class ContactPageView(ListView):
     context_object_name = 'contactpage'
 
 
+class CatalogPageView(ListView):
+    queryset = CatalogPage.objects.all()
+    template_name = 'catalog.html'
+    context_object_name = 'catalogpage'
+
+
 class ContactUsView(CreateView):
     form_class = ContactUsFom
     template_name = 'contact.html'
@@ -41,6 +47,6 @@ class PartnerPageViews(ListView):
     template_name = 'partner.html'
     context_object_name = 'partnerpage'
 
-
 # def myview(request):
 #     return render(request, 'about.html', {'config': config})
+

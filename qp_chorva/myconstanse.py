@@ -9,7 +9,7 @@ CONSTANCE_CONFIG = {
     'MAIN_4': (
         'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
         'лучшие на рынке среди наших конкурентов.',
-        'about us text',),
+        'about us text'),
     'MAIN_5': ('ПОДРОБНЕЕ', 'button'),
     'MAIN_6': ('Мы производим', 'button'),
     'MAIN_7': ('ЭКСПОРТ И ИМПОРТ', 'button'),
@@ -78,26 +78,52 @@ CONSTANCE_CONFIG = {
     'PARTNER_TITLE': ('Партнёрам', 'Title'),
     'PARTNER_1': ('Партнёрам', 'Header 1'),
     'PARTNER_2': (
-        'Наши продукты и услуги нашей компании благодаря нашему опыту и качеству могут похвастаться званием лучших в '
-        'Узбекистане.',
+        'Наши продукты и услуги нашей компании благодаря нашему опыту и качеству могут похвастаться званием лучших в Узбекистане.',
         'Header 2'),
     'PARTNER_3': ('Тел: (+99890)737-00-01.', 'Header 3'),
     'PARTNER_4': ('E-mail: kparranda@mail.ru.', 'Header 4'),
     'PARTNER_5': ('Директор: У.Ю. Мадаминов', 'Header 5'),
     'PARTNER_6': ('СВЯЗАТЬСЯ С НАМИ', 'button'),
     'PARTNER_7': ('Преимущества', 'Advantage'),
+
+    'BASE_1': ('Мы в соц. сетях:', ' '),
+    'BASE_2': ('Наш телефон:', ''),
+    'BASE_3': ('Тел: (+99890)737-00-01', ' '),
+    'BASE_4': ('Все права защищены', ' '),
+    'BASE_5': ('2004 - 2020', ' '),
 }
 
 # CONSTANCE_CONFIG_FIELDSETS = {
 #     'Main page': {
 #         'fields': (
-#             'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9', 'MAIN_10',
-#             'MAIN_11',
-#             'MAIN_12', 'MAIN_13',
-#         ),
+#             'TITLE_INDEX', 'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9',
+#             'MAIN_10', 'MAIN_11',
+#             'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15'),
 #         'collapse': True
 #     },
+# 'AboutPage': {
+#     'fields': ("ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9",
+#                "TITLE_ABOUT",),
+#     'collapse': True, },
 #
+# 'CatalogPage': {
+#     'fields': (
+#         'TITLE_CATALOG', 'CATALOG_2', 'CATALOG_3', 'CATALOG_4', 'CATALOG_5', 'CATALOG_6', 'CATALOG_7', 'CATALOG_8',
+#         'CATALOG_9', 'CATALOG_10',),
+#     'collapse': True, },
+# 'ContactPage': {
+#     'fields': (
+#         'CONTACT_TITLE', 'CONTACT_1', 'CONTACT_2', 'CONTACT_3', 'CONTACT_4', 'CONTACT_5', 'CONTACT_6', 'CONTACT_7',
+#         'CONTACT_8', 'CONTACT_9', 'CONTACT_10', 'CONTACT_11', 'CONTACT_12', 'CONTACT_13', 'CONTACT_14',),
+#     'collapse': True,
+# },
+# 'PartnerPage': {
+#     'fields': (
+#         'PARTNER_TITLE', 'PARTNER_1', 'PARTNER_2', 'PARTNER_3', 'PARTNER_4', 'PARTNER_5', 'PARTNER_6',
+#         'PARTNER_7',),
+#     'collapse': True,
+# },
+
 # }
 
 CONSTANCE_CONFIG_FIELDSETS = {
@@ -105,6 +131,7 @@ CONSTANCE_CONFIG_FIELDSETS = {
         'TITLE_INDEX', 'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9',
         'MAIN_10', 'MAIN_11',
         'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15',),
+
     'AboutPage': (
         "ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9",
         "TITLE_ABOUT",),
@@ -117,5 +144,8 @@ CONSTANCE_CONFIG_FIELDSETS = {
     ),
     'PartnerPage': (
         'PARTNER_TITLE', 'PARTNER_1', 'PARTNER_2', 'PARTNER_3', 'PARTNER_4', 'PARTNER_5', 'PARTNER_6', 'PARTNER_7',
+    ),
+    'BaseSite': (
+        'BASE_1', 'BASE_2', 'BASE_3', 'BASE_4', 'BASE_5',
     ),
 }

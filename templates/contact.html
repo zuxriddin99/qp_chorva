@@ -8,12 +8,6 @@
     contacts
 {% endblock %}
 
-{% block menu %}
-    <li><a href="{% url 'index' %}">Главная</a></li>
-    <li><a href="{% url 'about' %}">О компании</a></li>
-    <li><a href="{% url 'catalog' %}">Каталог</a></li>
-    <li class='activ'><a href="{% url 'contact' %}">Контакты</a></li>
-{% endblock %}
 
 {% block header %}
 
@@ -41,7 +35,8 @@
                     <form action="{% url 'contactus' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" id='name' placeholder="{{ config.CONTACT_8 }}" name="name">
+                            <input type="text" class="form-control" id='name' placeholder="{{ config.CONTACT_8 }}"
+                                   name="name">
                         </div>
                         <div class="form-group">
                             <input type="number" class="form-control" id='tel' placeholder="{{ config.CONTACT_9 }}"

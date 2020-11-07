@@ -1,7 +1,8 @@
 from django.db import models
 
-
 # Create your models here.
+from django.urls import reverse
+
 
 class AboutPage(models.Model):
     """"  posts in about page """
@@ -74,3 +75,30 @@ class PartnerPage(models.Model):
 
     def __str__(self):
         return self.text
+
+
+class CatalogPage(models.Model):
+    title = models.CharField(max_length=100, blank=True)
+    image = models.ImageField(upload_to='catalog_image')
+    text_1 = models.CharField(max_length=100, blank=True)
+    text_2 = models.CharField(max_length=100, blank=True)
+    text_3 = models.CharField(max_length=100, blank=True)
+    text_4 = models.CharField(max_length=100, blank=True)
+
+    class Meta:
+        verbose_name = "пост:каталог"
+        verbose_name_plural = "посты:каталог"
+
+    def __str__(self):
+        return self.title
+
+
+class Menu(models.Model):
+    name = models.CharField(max_length=100)
+    url = models.CharField(max_length=100)
+
+    def get_absolute_url(self):
+        return reverse(self.url)
+
+    def __str__(self):
+        return self.name

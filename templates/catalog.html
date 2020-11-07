@@ -8,12 +8,7 @@
     catalog
 {% endblock %}
 
-{% block menu %}
-    <li><a href="{% url 'index' %}">Главная</a></li>
-    <li><a href="{% url 'about' %}">О компании</a></li>
-    <li class='activ'><a href="{% url 'catalog' %}">Каталог</a></li>
-    <li><a href="{% url 'contact' %}">Контакты</a></li>
-{% endblock %}
+
 {% block header %}
     <!-- Шапка сайта -->
     <div class="container">
@@ -46,82 +41,29 @@
             <div class="sell-title">{{ config.CATALOG_5 }}</div>
             <div class="sell-block">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="block-item"
-                             style="background:url({% static 'img/catalog-block.png' %}) center center/cover no-repeat">
-                            <div class="block-title">Экспорт и импорт:</div>
-                            <div class="block-list">
-                                <ul>
-                                    <li>бройлерных цыплят</li>
-                                    <li>бройлерных цыплят</li>
-                                </ul>
-                                <ul>
-                                    <li>комбикорма</li>
-                                    <li>яиц</li>
-                                </ul>
-                            </div>
-                            <div class="block-btn">
-                                <button>СВЯЗАТЬСЯ С НАМИ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="block-item"
-                             style="background:url({% static 'img/catalog-block.png' %}) center center/cover no-repeat">
-                            <div class="block-title">Продажа:</div>
-                            <div class="block-list">
-                                <ul>
-                                    <li>бройлерных цыплят</li>
-                                    <li>бройлерных цыплят</li>
-                                </ul>
-                                <ul>
-                                    <li>комбикорма</li>
-                                    <li>яиц</li>
-                                </ul>
-                            </div>
-                            <div class="block-btn">
-                                <button>СВЯЗАТЬСЯ С НАМИ</button>
+                    {% for catalog in catalogpage %}
+                        <div class="col-md-6">
+                            <div class="block-item"
+                                 style="background:url({{ catalog.image.url }}) center center/cover no-repeat">
+                                <div class="block-title">{{ catalog.title }}</div>
+                                <div class="block-list">
+                                    <ul>
+                                        <li>{{ catalog.text_1 }}</li>
+                                        <li>{{ catalog.text_2 }}</li>
+                                    </ul>
+                                    <ul>
+                                        <li>{{ catalog.text_3 }}</li>
+                                        <li>{{ catalog.text_4 }}</li>
+                                    </ul>
+                                </div>
+                                <div class="block-btn">
+                                    <button>{{ config.CATALOG_10 }}</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="block-item"
-                             style="background:url({% static 'img/catalog-block.png' %}) center center/cover no-repeat">
-                            <div class="block-title">Экспорт и импорт:</div>
-                            <div class="block-list">
-                                <ul>
-                                    <li>бройлерных цыплят</li>
-                                    <li>бройлерных цыплят</li>
-                                </ul>
-                                <ul>
-                                    <li>комбикорма</li>
-                                    <li>яиц</li>
-                                </ul>
-                            </div>
-                            <div class="block-btn">
-                                <button>СВЯЗАТЬСЯ С НАМИ</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="block-item"
-                             style="background:url({% static 'img/catalog-block.png' %}) center center/cover no-repeat">
-                            <div class="block-title">Продажа:</div>
-                            <div class="block-list">
-                                <ul>
-                                    <li>бройлерных цыплят</li>
-                                    <li>бройлерных цыплят</li>
-                                </ul>
-                                <ul>
-                                    <li>комбикорма</li>
-                                    <li>яиц</li>
-                                </ul>
-                            </div>
-                            <div class="block-btn">
-                                <button>СВЯЗАТЬСЯ С НАМИ</button>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
+
+
                 </div>
             </div>
         </div>

@@ -1,6 +1,4 @@
 from django.contrib import admin
-from collections import OrderedDict
-# Register your models here.
 from .models import *
 
 
@@ -45,9 +43,12 @@ class PartnerPageAmin(admin.ModelAdmin):
 
 admin.site.register(PartnerPage, PartnerPageAmin)
 
-CONSTANCE_CONFIG = OrderedDict([
-    ('SITE_NAME', ('My Title', 'Website title')),
-    ('SITE_DESCRIPTION', ('', 'Website description')),
-    ('THEME', ('light-blue', 'Website theme')),
-])
 
+class CatalogPageAmin(admin.ModelAdmin):
+    list_display = ('title', 'text_1', 'text_2', 'text_3', 'text_4')
+    search_fields = ('title', 'text_1', 'text_2', 'text_3', 'text_4')
+
+
+admin.site.register(CatalogPage, CatalogPageAmin)
+
+admin.site.register(Menu)
