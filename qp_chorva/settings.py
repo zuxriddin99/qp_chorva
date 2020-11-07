@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from constance.signals import config_updated
+from qp_chorva.myconstanse import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -134,68 +135,4 @@ CONSTANCE_REDIS_CONNECTION = {
     'host': 'localhost',
     'port': 6379,
     'db': 0,
-}
-
-CONSTANCE_CONFIG = {
-
-    'MAIN_1': (
-        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
-        'лучшие на рынке среди наших конкурентов. ',
-        'Header text '),
-    'MAIN_2': ('НАША ПРОДУКЦИЯ', 'Header button'),
-    'MAIN_3': ('О нас', 'About us'),
-    'MAIN_4': (
-        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
-        'лучшие на рынке среди наших конкурентов.',
-        'about us text',),
-    'MAIN_5': ('ПОДРОБНЕЕ', 'button'),
-    'MAIN_6': ('Мы производим', 'button'),
-    'MAIN_7': ('ЭКСПОРТ И ИМПОРТ', 'button'),
-    'MAIN_8': ('ПРОДАЖУ ЯИЦ', 'button'),
-    'MAIN_9': ('УЗНАТЬ ПОДРОБНЕЕ', 'button'),
-    'MAIN_10': ('Наши контакты', 'contact'),
-    'MAIN_11': ('Адрес: Республика Узбекистан, Хорезмская область, Кушкупирский район село Узбекяп.', 'address'),
-    'MAIN_12': ('Банк: Хорезмский региональный филиал АК «УзПромстройбанка».', 'Bank info'),
-    'MAIN_13': ('Тел: (+99890)737-00-01.', 'Mobile number'),
-    'MAIN_14': ('Мы в соц. сетях:', 'Info social set'),
-    'MAIN_15': ('Все права защищены', 'Last item'),
-
-    "ABOUT_1": (
-        'QO’SHKO’PIR PARRANDA - компании которая занимается поставкой яиц, комбикорма,бройлерных цеплят и многого '
-        'другого по всему Узбекистану и за границу.',
-        'header'),
-    "ABOUT_2": ('Мы - лучшие в нашем деле и мы активноразвиваемся и расширяемся с 2004 года.', 'header 2 '),
-    "TITLE_A": ('О компании', 'TITLE'),
-    "ABOUT_3": ('С чего всё начиналось?', 'did  all start'),
-    "ABOUT_4": ('В нынешнее время', 'block'),
-    "ABOUT_5": ('2020 год', 'Title'),
-    "ABOUT_6": (
-        'Убой бройлерных кур (1500-2000) голов и захват рынка, поставки за границу и расширение наших границ.',
-        'Text 1'),
-    "ABOUT_7": (
-        'Мы - компания с долгой историей развития и нам вы можете доверять. Мы отвечаем за качество нашего продукта.',
-        'text 2'),
-    "ABOUT_8": ('СВЯЗАТЬСЯ С НАМИ', 'button'),
-    "ABOUT_9": ('Наши преимущества', 'advantage'),
-
-}
-
-# CONSTANCE_CONFIG_FIELDSETS = {
-#     'Main page': {
-#         'fields': (
-#             'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9', 'MAIN_10',
-#             'MAIN_11',
-#             'MAIN_12', 'MAIN_13',
-#         ),
-#         'collapse': True
-#     },
-#
-# }
-
-CONSTANCE_CONFIG_FIELDSETS = {
-    'MainPage': (
-        'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9', 'MAIN_10', 'MAIN_11',
-        'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15',),
-    'AboutPage': (
-        "ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9", "TITLE_A",),
 }

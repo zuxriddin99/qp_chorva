@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    Каталог
+    {{ config.TITLE_CATALOG }}
 {% endblock %}
 
 {% block bg_image %}
@@ -19,10 +19,9 @@
     <div class="container">
         <div class="row d-flex  align-items-center">
             <div class="col-6 col-md-5">
-                <h1 class="label">Наш каталог</h1>
+                <h1 class="label">{{ config.CATALOG_2 }}</h1>
                 <div class="catalog-descr">
-                    Наши продукты и услуги нашей компании благодаря нашему опыту и качеству могут похвастаться
-                    званием лучших в Узбекистане.
+                    {{ config.CATALOG_3 }}
                 </div>
             </div>
 
@@ -35,7 +34,7 @@
             </div>
         </div>
         <div class="catalog-btn">
-            <button>НАША ПРОДУКЦИЯ</button>
+            <button>{{ config.CATALOG_4 }}</button>
         </div>
     </div>
 {% endblock %}
@@ -44,7 +43,7 @@
 
     <section class="sell">
         <div class="container">
-            <div class="sell-title">Мы продаём и поставляем</div>
+            <div class="sell-title">{{ config.CATALOG_5 }}</div>
             <div class="sell-block">
                 <div class="row">
                     <div class="col-md-6">
@@ -132,23 +131,21 @@
             <div class="row">
                 <div class="col-8 col-md-7">
                     <div class="cow-subtitle">
-                        Наша продукция - хороший выбор
+                        {{ config.CATALOG_6 }}
                     </div>
                     <div class="cow-descr">
-                        Почему же наша продукция хороший выбор?
+                        {{ config.CATALOG_7 }}
                         <br>
                         <br>
-                        Мы уже более 16 лет на рынке и наша фирма имеет огромный масштаб и мы не хотим на этом
-                        останавливаться.
+                        {{ config.CATALOG_8 }}
                         <br>
                         <br>
-                        Мы отвечаем за качество товара и мы не голословны (мы вернем вам деньги если будут обнаружены
-                        деффекты и так далее)
+                        {{ config.CATALOG_9 }}
                     </div>
                 </div>
             </div>
             <div class="cow-btn">
-                <button>СВЯЗАТЬСЯ С НАМИ</button>
+                <button>{{ config.CATALOG_10 }}</button>
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-    Контакты
+    {{ config.CONTACT_TITLE }}
 {% endblock %}
 
 {% block bg_image %}
@@ -22,40 +22,36 @@
     <div class="container">
         <div class="row d-flex  align-items-start">
             <div class="col-6 col-md-5">
-                <h1 class="contacts-label">Контакты</h1>
+                <h1 class="contacts-label">{{ config.CONTACT_1 }}</h1>
                 <div class="contacts-descr">
-                    Адрес: Республика Узбекистан,
-                    Хорезмская область, Кушкупирский
-                    район
-                    село Узбекяп.
+                    {{ config.CONTACT_2 }}
                     <br><br>
-                    Банк: Хорезмский региональный
-                    филиал АК «УзПромстройбанка».
+                    {{ config.CONTACT_3 }}
                     <br><br>
-                    Тел: (+99890)737-00-01.
+                    {{ config.CONTACT_4 }}
                     <br><br>
-                    E-mail: kparranda@mail.ru.
+                    {{ config.CONTACT_5 }}
                     <br><br>
-                    Директор: У.Ю. Мадаминов
+                    {{ config.CONTACT_6 }}
                 </div>
             </div>
             <div class="col-6 col-md-4 offset-md-1">
-                <div class="contacts-label">Оставьте заявку</div>
+                <div class="contacts-label">{{ config.CONTACT_7 }}</div>
                 <div class="contacts-form">
                     <form action="{% url 'contactus' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" id='name' placeholder="Имя*" name="name">
+                            <input type="text" class="form-control" id='name' placeholder="{{ config.CONTACT_8 }}" name="name">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" id='tel' placeholder="Номер телефона*"
+                            <input type="number" class="form-control" id='tel' placeholder="{{ config.CONTACT_9 }}"
                                    name="number">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id='message' placeholder="Сообщение*"
+                            <input type="text" class="form-control" id='message' placeholder="{{ config.CONTACT_10 }}"
                                    name="message">
                         </div>
-                        <button type="submit" class="btn btn-primary">НАША ПРОДУКЦИЯ</button>
+                        <button type="submit" class="btn btn-primary">{{ config.CONTACT_11 }}</button>
                     </form>
 
                 </div>
@@ -78,7 +74,7 @@
     <section class="sotru">
         <div class="container">
             <div class="sotru-title">
-                Сотрудничая с нами вы
+                {{ config.CONTACT_12 }}
             </div>
             <div class="sotru-blocks">
                 <div class="row">
@@ -108,11 +104,11 @@
     <section class="map">
         <div class="container">
             <div class="map-title">
-                Мы находимся
+                {{ config.CONTACT_13 }}
             </div>
 
             <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">
-                <button>Открыть в яндекс карте</button>
+                <button>{{ config.CONTACT_14 }}</button>
             </div>
         </div>
     </section>
