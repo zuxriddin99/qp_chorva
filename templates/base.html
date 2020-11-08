@@ -19,15 +19,24 @@
                 <img src="{% static 'img/logo/logo.png' %}" alt="" class="logo">
                 <ul class='menu d-flex justify-content-between align-items-center'>
                     {% for menu in menus %}
-                        <li class="{% if request.path_info == menu.get_absolute_url %} activ {% endif %}"><a
-                                href="{{ menu.get_absolute_url }}">{{ menu.name }}</a>
+                        {% if menu.url != 'partner' %}
+                            <li class="{% if request.path_info == menu.get_absolute_url %} activ {% endif %}"><a
+                                    href="{{ menu.get_absolute_url }}">{{ menu.name }}</a>
 
-                        </li>
-
+                            </li>
+                        {% endif %}
                     {% endfor %}
 
                 </ul>
-                <button class='menu-btn'><a href="{% url 'partner' %}">ПАРТНЁРАМ</a></button>
+                {% for menu in menus %}
+
+                    {% if menu.url == 'partner' %}
+                        <button class='menu-btn'><a href="{{ menu.get_absolute_url }}">{{ menu.name }}</a></button>
+                    {% endif %}
+
+                {% endfor %}
+
+
 
                 <ul class='lang '>
                     <li>
