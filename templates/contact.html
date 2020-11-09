@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load tags %}
 {% load static %}
 {% block title %}
-    {{ config.CONTACT_TITLE }}
+    {{ 'CONTACT_TITLE_'|translate:request.path }}
 {% endblock %}
 
 {% block bg_image %}
@@ -16,37 +17,37 @@
     <div class="container">
         <div class="row d-flex  align-items-start">
             <div class="col-6 col-md-5">
-                <h1 class="contacts-label">{{ config.CONTACT_1 }}</h1>
+                <h1 class="contacts-label">{{ 'CONTACT_1_'|translate:request.path }}</h1>
                 <div class="contacts-descr">
-                    {{ config.CONTACT_2 }}
+                    {{ 'CONTACT_2_'|translate:request.path }}
                     <br><br>
-                    {{ config.CONTACT_3 }}
+                   {{ 'CONTACT_3_'|translate:request.path }}
                     <br><br>
-                    {{ config.CONTACT_4 }}
+                    {{ 'CONTACT_4_'|translate:request.path }}
                     <br><br>
-                    {{ config.CONTACT_5 }}
+                   {{ 'CONTACT_5_'|translate:request.path }}
                     <br><br>
-                    {{ config.CONTACT_6 }}
+                    {{ 'CONTACT_6_'|translate:request.path }}
                 </div>
             </div>
             <div class="col-6 col-md-4 offset-md-1">
-                <div class="contacts-label">{{ config.CONTACT_7 }}</div>
+                <div class="contacts-label">{{ 'CONTACT_7_'|translate:request.path }}</div>
                 <div class="contacts-form">
                     <form action="{% url 'contactus' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" id='name' placeholder="{{ config.CONTACT_8 }}"
+                            <input type="text" class="form-control" id='name' placeholder="{{ 'CONTACT_8_'|translate:request.path }}"
                                    name="name">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" id='tel' placeholder="{{ config.CONTACT_9 }}"
+                            <input type="number" class="form-control" id='tel' placeholder="{{ 'CONTACT_9_'|translate:request.path }}"
                                    name="number">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id='message' placeholder="{{ config.CONTACT_10 }}"
+                            <input type="text" class="form-control" id='message' placeholder="{{ 'CONTACT_10_'|translate:request.path }}"
                                    name="message">
                         </div>
-                        <button type="submit" class="btn btn-primary">{{ config.CONTACT_11 }}</button>
+                        <button type="submit" class="btn btn-primary">{{ 'CONTACT_11_'|translate:request.path }}</button>
                     </form>
 
                 </div>
@@ -69,7 +70,7 @@
     <section class="sotru">
         <div class="container">
             <div class="sotru-title">
-                {{ config.CONTACT_12 }}
+                {{ 'CONTACT_12_'|translate:request.path }}
             </div>
             <div class="sotru-blocks">
                 <div class="row">
@@ -99,11 +100,11 @@
     <section class="map">
         <div class="container">
             <div class="map-title">
-                {{ config.CONTACT_13 }}
+                {{ 'CONTACT_13_'|translate:request.path }}
             </div>
 
             <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">
-                <button>{{ config.CONTACT_14 }}</button>
+                <button>{{ 'CONTACT_14_'|translate:request.path }}</button>
             </div>
         </div>
     </section>

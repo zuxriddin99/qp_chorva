@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load tags %}
 {% load static %}
 {% block title %}
-    {{ config.TITLE_CATALOG }}
+    {{ 'TITLE_CATALOG_'|translate:request.path }}
 {% endblock %}
 
 {% block bg_image %}
@@ -14,9 +15,9 @@
     <div class="container">
         <div class="row d-flex  align-items-center">
             <div class="col-6 col-md-5">
-                <h1 class="label">{{ config.CATALOG_2 }}</h1>
+                <h1 class="label">{{ 'CATALOG_2_'|translate:request.path }}</h1>
                 <div class="catalog-descr">
-                    {{ config.CATALOG_3 }}
+                    {{ 'CATALOG_3_'|translate:request.path }}
                 </div>
             </div>
 
@@ -29,7 +30,7 @@
             </div>
         </div>
         <div class="catalog-btn">
-            <button>{{ config.CATALOG_4 }}</button>
+            <button>{{ 'CATALOG_4_'|translate:request.path }}</button>
         </div>
     </div>
 {% endblock %}
@@ -38,7 +39,7 @@
 
     <section class="sell">
         <div class="container">
-            <div class="sell-title">{{ config.CATALOG_5 }}</div>
+            <div class="sell-title">{{ 'CATALOG_5_'|translate:request.path }}</div>
             <div class="sell-block">
                 <div class="row">
                     {% for catalog in catalogpage %}
@@ -57,7 +58,7 @@
                                     </ul>
                                 </div>
                                 <div class="block-btn">
-                                    <button>{{ config.CATALOG_10 }}</button>
+                                    <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
                                 </div>
                             </div>
                         </div>
@@ -73,21 +74,21 @@
             <div class="row">
                 <div class="col-8 col-md-7">
                     <div class="cow-subtitle">
-                        {{ config.CATALOG_6 }}
+                        {{ 'CATALOG_6_'|translate:request.path }}
                     </div>
                     <div class="cow-descr">
-                        {{ config.CATALOG_7 }}
+                        {{ 'CATALOG_7_'|translate:request.path }}
                         <br>
                         <br>
-                        {{ config.CATALOG_8 }}
+                        {{ 'CATALOG_8_'|translate:request.path }}
                         <br>
                         <br>
-                        {{ config.CATALOG_9 }}
+                        {{ 'CATALOG_9_'|translate:request.path }}
                     </div>
                 </div>
             </div>
             <div class="cow-btn">
-                <button>{{ config.CATALOG_10 }}</button>
+                <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
             </div>
         </div>
     </section>

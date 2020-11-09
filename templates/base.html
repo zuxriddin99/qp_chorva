@@ -1,3 +1,4 @@
+{% load tags %}
 {% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
@@ -105,7 +106,7 @@
                     QO’SHKO’PIR
                     PARRANDA
                 </div>
-                <div class="footer-date">{% trans config.BASE_5 %}</div>
+                <div class="footer-date">{{ 'BASE_5_'|translate:request.path }}</div>
             </div>
             <div class="col-2 offset-2 col-md-2 offset-md-2 d-flex align-items-center flex-column">
                 <nav class='footer-menu'>
@@ -124,7 +125,7 @@
             </div>
             <div class="col-3 offset-2 col-md-3 offset-md-2 d-flex align-items-end flex-column">
                 <div class="footer-sot">
-                    <span>{{ config.BASE_1 }}</span>
+                    <span>{{ 'BASE_1_'|translate:request.path }}</span>
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-telegram" aria-hidden="true"></i></a></li>
@@ -132,16 +133,13 @@
                     </ul>
                 </div>
                 <div class="footer-phone">
-                    {% if 'ru' == LANGUAGE_CODE %}
-                        {{ config.BASE_2 }}
-
-                    {% endif %}
+                    {{ 'BASE_2_'|translate:request.path }}
                 </div>
                 <div class="footer-tel">
-                    {{ config.BASE_3 }}
+                    {{ 'BASE_3_'|translate:request.path }}
                 </div>
                 <div class="footer-end">
-                    {{ config.BASE_4 }}
+                    {{ 'BASE_4_'|translate:request.path }}
                 </div>
             </div>
         </div>

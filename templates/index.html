@@ -2,13 +2,9 @@
 {% load static i18n tags %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block title %}
-    {% if 'ru' in request.path %}
-        {{ config.TITLE_INDEX_ru }}
-    {% elif 'uz' in request.path %}
-        {{ config.TITLE_INDEX_uz }}
-    {% else %}
-        {{ config.TITLE_INDEX_en }}
-    {% endif %}
+
+    {{ 'TITLE_INDEX_'|translate:request.path }}
+
 
 {% endblock %}
 
@@ -24,7 +20,7 @@
             <div class="col-5 col-md-5">
                 <h1 class="label">QO'SHKO'PIR PARRANDA </h1>
                 <div class="main-descr">
-                   {{ 'MAIN_1_'|translate:request.path }}
+                    {{ 'MAIN_1_'|translate:request.path }}
                 </div>
             </div>
             <div class="col-5 offset-1 col-md-5 offset-md-1">
@@ -42,13 +38,7 @@
         </div>
         <div class="main-btn">
             <a href="{% url 'catalog' %}">
-                <button> {% if 'ru' in request.path %}
-                    {{ config.MAIN_2_ru }}
-                {% elif 'uz' in request.path %}
-                    {{ config.MAIN_2_uz }}
-                {% else %}
-                    {{ config.MAIN_2_en }}
-                {% endif %}</button>
+                <button> {{ 'MAIN_2_'|translate:request.path }}</button>
             </a>
         </div>
     </div>
@@ -72,32 +62,14 @@
                 </div>
                 <div class="col-6 col-md-5 offset-md-1">
                     <div class="about-title">
-                        {% if 'ru' in request.path %}
-                            {{ config.MAIN_3_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_3_uz }}
-                        {% else %}
-                            {{ config.MAIN_3_en }}
-                        {% endif %}
+                        {{ 'MAIN_3_'|translate:request.path }}
                     </div>
                     <div class="about-descr">
-                        {% if 'ru' in request.path %}
-                            {{ config.MAIN_4_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_4_uz }}
-                        {% else %}
-                            {{ config.MAIN_4_en }}
-                        {% endif %}
+                        {{ 'MAIN_4_'|translate:request.path }}
                     </div>
                     <div class="about-btn">
                         <a href="{% url 'about' %}">
-                            <button>{% if 'ru' in request.path %}
-                                {{ config.MAIN_5_ru }}
-                            {% elif 'uz' in request.path %}
-                                {{ config.MAIN_5_uz }}
-                            {% else %}
-                                {{ config.MAIN_5_en }}
-                            {% endif %}</button>
+                            <button>{{ 'MAIN_5_'|translate:request.path }}</button>
                         </a>
                     </div>
                 </div>
@@ -108,101 +80,46 @@
     <section class='produce'>
         <div class="container">
             <div class="produce-title">
-                {% if 'ru' in request.path %}
-                    {{ config.MAIN_6_ru }}
-                {% elif 'uz' in request.path %}
-                    {{ config.MAIN_6_uz }}
-                {% else %}
-                    {{ config.MAIN_6_en }}
-                {% endif %}
+                {{ 'MAIN_6_'|translate:request.path }}
             </div>
             <div class="row">
                 <div class="col-6 col-md-6">
                     <div class="produce-bigbtn">
-                        <button> {% if 'ru' in request.path %}
-                            {{ config.MAIN_7_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_7_uz }}
-                        {% else %}
-                            {{ config.MAIN_7_en }}
-
-                        {% endif %}</button>
+                        <button> {{ 'MAIN_7_'|translate:request.path }}</button>
                     </div>
                 </div>
                 <div class="col-6 col-md-6">
                     <div class="produce-bigbtn">
-                        <button>{% if 'ru' in request.path %}
-                            {{ config.MAIN_8_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_8_uz }}
-                        {% else %}
-                            {{ config.MAIN_8_en }}
-                        {% endif %}</button>
+                        <button>{{ 'MAIN_8_'|translate:request.path }}</button>
                     </div>
                 </div>
             </div>
             <div class="produce-btn">
-                <button> {% if 'ru' in request.path %}
-                    {{ config.MAIN_9_ru }}
-                {% elif 'uz' in request.path %}
-                    {{ config.MAIN_9_uz }}
-                {% else %}
-                    {{ config.MAIN_9_en }}
-                {% endif %}</button>
+                <button> {{ 'MAIN_9_'|translate:request.path }}</button>
             </div>
         </div>
     </section>
     <!--Произвоства-->
     <section class="contact">
         <div class="container">
-            <div class="contact-label">{% if 'ru' in request.path %}
-                {{ config.MAIN_10_ru }}
-            {% elif 'uz' in request.path %}
-                {{ config.MAIN_10_uz }}
-            {% else %}
-                {{ config.MAIN_10_en }}
-            {% endif %}</div>
+            <div class="contact-label">{{ 'MAIN_10_'|translate:request.path }}</div>
             <div class="row d-flex align-items-center">
                 <div class="col-6 col-md-5">
                     <div class="contact-title">
                         «QO'SHKO'PIR PARRANDA»
                     </div>
                     <div class="contact-descr">
-                        {% if 'ru' in request.path %}
-                            {{ config.MAIN_11_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_11_uz }}
-                        {% else %}
-                            {{ config.MAIN_11_en }}
-                        {% endif %}
+                        {{ 'MAIN_11_'|translate:request.path }}
                         <br>
                         <br>
-                        {% if 'ru' in request.path %}
-                            {{ config.MAIN_12_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_12_uz }}
-                        {% else %}
-                            {{ config.MAIN_12_en }}
-                        {% endif %}
+                        {{ 'MAIN_12_'|translate:request.path }}
                         <br>
                         <br>
-                        {% if 'ru' in request.path %}
-                            {{ config.MAIN_13_ru }}
-                        {% elif 'uz' in request.path %}
-                            {{ config.MAIN_13_uz }}
-                        {% else %}
-                            {{ config.MAIN_13_en }}
-                        {% endif %}
+                        {{ 'MAIN_13_'|translate:request.path }}
                     </div>
                     <div class="contact-btn">
                         <a href="{% url 'contact' %}">
-                            <button>{% if 'ru' in request.path %}
-                                {{ config.MAIN_5_ru }}
-                            {% elif 'uz' in request.path %}
-                                {{ config.MAIN_5_uz }}
-                            {% else %}
-                                {{ config.MAIN_5_en }}
-                            {% endif %}</button>
+                            <button>{{ 'MAIN_5_'|translate:request.path }}</button>
                         </a>
                     </div>
                 </div>

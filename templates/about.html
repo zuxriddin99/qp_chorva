@@ -3,7 +3,7 @@
 {% load static tags %}
 
 {% block title %}
-    {{ config.TITLE_ABOUT }}
+    {{ 'TITLE_ABOUT_'|translate:request.path }}
 {% endblock %}
 
 {% block bg_image %}
@@ -19,10 +19,10 @@
     <div class="container">
         <div class="row d-flex  align-items-center">
             <div class="col-6 col-md-5">
-                <h1 class="label">{{ config.TITLE_A }}</h1>
+                <h1 class="label">{{ 'TITLE_ABOUT_'|translate:request.path }}</h1>
                 <div class="main-descr">
-                    {{ config.ABOUT_1 }}
-                    <br> <br>{{ config.ABOUT_2 }}
+                    {{ 'ABOUT_1_'|translate:request.path }}
+                    <br> <br>{{ 'ABOUT_2_'|translate:request.path }}
                 </div>
             </div>
 
@@ -128,25 +128,25 @@
     <section class="present">
         <div class="container">
             <div class="present-title">
-                {{ config.ABOUT_4 }}
+               {{ 'ABOUT_4_'|translate:request.path }}
             </div>
             <div class="row">
                 <div class="col-7 col-md-6">
                     <div class="present-subtitle">
-                        {{ config.ABOUT_5 }}
+                        {{ 'ABOUT_5_'|translate:request.path }}
                     </div>
                     <div class="present-descr">
-                        {{ config.ABOUT_6 }}
+                        {{ 'ABOUT_6_'|translate:request.path }}
                         <br>
                         <br>
-                        {{ config.ABOUT_7 }}
+                        {{ 'ABOUT_7_'|translate:request.path }}
 
                     </div>
                 </div>
             </div>
             <div class="present-btn">
                 <a href="{% url 'contact' %}">
-                    <button>{{ config.ABOUT_8 }}</button>
+                    <button>{{ 'ABOUT_8_'|translate:request.path }}</button>
                 </a>
             </div>
         </div>
@@ -154,7 +154,7 @@
     <section class="advant">
         <div class="container">
             <div class="advant-title">
-                {{ config.ABOUT_9 }}
+                {{ 'ABOUT_9_'|translate:request.path }}
             </div>
             <div class="advant-blocks">
                 <div class="row">

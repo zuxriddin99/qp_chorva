@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load tags %}
 {% load static %}
 {% block title %}
-    Партнёрам
+   {{ 'PARTNER_TITLE_'|translate:request.path }}
 {% endblock %}
 
 {% block bg_image %}
@@ -15,15 +16,14 @@
     <div class="container">
         <div class="row d-flex  align-items-center">
             <div class="col-6 col-md-5">
-                <h1 class="partner-label">Партнёрам</h1>
+                <h1 class="partner-label"> {{ 'PARTNER_1_'|translate:request.path }}</h1>
                 <div class="partner-descr">
-                    Наши продукты и услуги нашей компании благодаря нашему опыту и качеству могут похвастаться
-                    званием лучших в Узбекистане.
+                    {{ 'PARTNER_2_'|translate:request.path }}
                     <br>
                     <br>
-                    Тел: (+99890)737-00-01.<br>
-                    E-mail: kparranda@mail.ru.<br>
-                    Директор: У.Ю. Мадаминов
+                     {{ 'PARTNER_3_'|translate:request.path }}<br>
+                     {{ 'PARTNER_4_'|translate:request.path }}<br>
+                    {{ 'PARTNER_5_'|translate:request.path }}
                 </div>
             </div>
 
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="partner-btn">
-            <button>СВЯЗАТЬСЯ С НАМИ</button>
+            <button> {{ 'PARTNER_6_'|translate:request.path }}</button>
         </div>
     </div>
 {% endblock %}
@@ -46,7 +46,7 @@
     <section class="benefits">
         <div class="container">
             <div class="benefits-title">
-                Преимущества
+                 {{ 'PARTNER_7_'|translate:request.path }}
             </div>
             <div class="benefits-blocks">
                 <div class="row">
