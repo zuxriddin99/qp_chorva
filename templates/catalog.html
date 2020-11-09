@@ -30,7 +30,9 @@
             </div>
         </div>
         <div class="catalog-btn">
-            <button>{{ 'CATALOG_4_'|translate:request.path }}</button>
+            <a href="{% url 'partner' %}">
+                <button>{{ 'CATALOG_4_'|translate:request.path }}</button>
+            </a>
         </div>
     </div>
 {% endblock %}
@@ -58,7 +60,9 @@
                                     </ul>
                                 </div>
                                 <div class="block-btn">
-                                    <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
+                                    <a href="{% url 'contact' %}">
+                                        <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +92,9 @@
                 </div>
             </div>
             <div class="cow-btn">
-                <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
+                <a href="{% url 'contact' %}">
+                    <button>{{ 'CATALOG_10_'|translate:request.path }}</button>
+                </a>
             </div>
         </div>
     </section>
