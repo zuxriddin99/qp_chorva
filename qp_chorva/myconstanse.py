@@ -60,7 +60,7 @@ CONSTANCE_CONFIG = {
     'CATALOG_10': ('СВЯЗАТЬСЯ С НАМИ', 'Button'),
 
     'CONTACT_TITLE': ('Контакты', 'Title'),
-    'CONTACT_1': ('Контакты', 'header 1'),
+    'CONTACT_1': ('Контакты', 'header 1', ),
     'CONTACT_2': ('Адрес: Республика Узбекистан, Хорезмская область, Кушкупирский район село Узбекяп.', 'header 2'),
     'CONTACT_3': ('Банк: Хорезмский региональный филиал АК «УзПромстройбанка».', 'header 3'),
     'CONTACT_4': ('Тел: (+99890)737-00-01.', 'header 4'),
@@ -101,34 +101,35 @@ CONSTANCE_CONFIG = {
 #             'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15'),
 #         'collapse': True
 #     },
-# 'AboutPage': {
-#     'fields': ("ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9",
-#                "TITLE_ABOUT",),
-#     'collapse': True, },
-#
-# 'CatalogPage': {
-#     'fields': (
-#         'TITLE_CATALOG', 'CATALOG_2', 'CATALOG_3', 'CATALOG_4', 'CATALOG_5', 'CATALOG_6', 'CATALOG_7', 'CATALOG_8',
-#         'CATALOG_9', 'CATALOG_10',),
-#     'collapse': True, },
-# 'ContactPage': {
-#     'fields': (
-#         'CONTACT_TITLE', 'CONTACT_1', 'CONTACT_2', 'CONTACT_3', 'CONTACT_4', 'CONTACT_5', 'CONTACT_6', 'CONTACT_7',
-#         'CONTACT_8', 'CONTACT_9', 'CONTACT_10', 'CONTACT_11', 'CONTACT_12', 'CONTACT_13', 'CONTACT_14',),
-#     'collapse': True,
-# },
-# 'PartnerPage': {
-#     'fields': (
-#         'PARTNER_TITLE', 'PARTNER_1', 'PARTNER_2', 'PARTNER_3', 'PARTNER_4', 'PARTNER_5', 'PARTNER_6',
-#         'PARTNER_7',),
-#     'collapse': True,
-# },
+# # 'AboutPage': {
+# #     'fields': ("ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9",
+# #                "TITLE_ABOUT",),
+# #     'collapse': True, },
+# #
+# # 'CatalogPage': {
+# #     'fields': (
+# #         'TITLE_CATALOG', 'CATALOG_2', 'CATALOG_3', 'CATALOG_4', 'CATALOG_5', 'CATALOG_6', 'CATALOG_7', 'CATALOG_8',
+# #         'CATALOG_9', 'CATALOG_10',),
+# #     'collapse': True, },
+# # 'ContactPage': {
+# #     'fields': (
+# #         'CONTACT_TITLE', 'CONTACT_1', 'CONTACT_2', 'CONTACT_3', 'CONTACT_4', 'CONTACT_5', 'CONTACT_6', 'CONTACT_7',
+# #         'CONTACT_8', 'CONTACT_9', 'CONTACT_10', 'CONTACT_11', 'CONTACT_12', 'CONTACT_13', 'CONTACT_14',),
+# #     'collapse': True,
+# # },
+# # 'PartnerPage': {
+# #     'fields': (
+# #         'PARTNER_TITLE', 'PARTNER_1', 'PARTNER_2', 'PARTNER_3', 'PARTNER_4', 'PARTNER_5', 'PARTNER_6',
+# #         'PARTNER_7',),
+# #     'collapse': True,
+# # },
 
 # }
 
 CONSTANCE_CONFIG_FIELDSETS = {
     'MainPage': (
-        'TITLE_INDEX', 'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9',
+        'TITLE_INDEX',
+        'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9',
         'MAIN_10', 'MAIN_11',
         'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15',),
 
@@ -148,4 +149,5 @@ CONSTANCE_CONFIG_FIELDSETS = {
     'BaseSite': (
         'BASE_1', 'BASE_2', 'BASE_3', 'BASE_4', 'BASE_5',
     ),
+
 }

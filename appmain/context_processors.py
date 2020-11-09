@@ -4,7 +4,7 @@ from .models import Menu
 
 
 def myview(request):
-    menus = Menu.objects.all()
+    menu = Menu.objects.all()
     context = {'config': config,
-               'menus': menus}
+               'menu': menu}
     return context

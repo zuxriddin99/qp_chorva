@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from constance.signals import config_updated
-from qp_chorva.myconstanse import *
+from .myconstanse import  *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'constance',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -109,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Asia/Tashkent'
 
@@ -119,6 +120,12 @@ USE_L10N = True
 
 USE_TZ = True
 
+gettext = lambda s: s
+LANGUAGES = (
+    ('ru', gettext('Russia')),
+    ('uz', gettext('Uzbek')),
+    ('en', gettext('English')),
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 

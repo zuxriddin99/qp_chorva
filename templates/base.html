@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,20 +18,21 @@
             <nav class='header-nav d-flex align-items-center'>
                 <img src="{% static 'img/logo/logo.png' %}" alt="" class="logo">
                 <ul class='menu d-flex justify-content-between align-items-center'>
-                    {% for menu in menus %}
-                        {% if menu.url != 'partner' %}
-                            <li class="{% if request.path_info == menu.get_absolute_url %} activ {% endif %}"><a
-                                    href="{{ menu.get_absolute_url }}">{{ menu.name }}</a>
+                    {% for menu_item in menu %}
+                        {% if menu_item.url != 'partner' %}
+                            <li class="{% if request.path_info == menu_item.get_absolute_url %} activ {% endif %}"><a
+                                    href="{{ menu_item.get_absolute_url }}">{{ menu_item.name }}</a>
 
                             </li>
                         {% endif %}
                     {% endfor %}
 
                 </ul>
-                {% for menu in menus %}
+                {% for menu_item in menu %}
 
-                    {% if menu.url == 'partner' %}
-                        <button class='menu-btn'><a href="{{ menu.get_absolute_url }}">{{ menu.name }}</a></button>
+                    {% if menu_item.url == 'partner' %}
+                        <button class='menu-btn'><a href="{{ menu_item.get_absolute_url }}">{{ menu_item.name }}</a>
+                        </button>
                     {% endif %}
 
                 {% endfor %}
@@ -43,6 +44,23 @@
                         RU<i class="fa fa-chevron-down" aria-hidden="true">
 
                     </i>
+                    <li>
+                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                            selected{% endif %}>
+                                        {{ language.code }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <input type="submit" value="Go">
+                        </form>
+                    </li>
 
                     </li>
                 </ul>
@@ -83,15 +101,15 @@
                     QO’SHKO’PIR
                     PARRANDA
                 </div>
-                <div class="footer-date">{{ config.BASE_5 }}</div>
+                <div class="footer-date">{% trans config.BASE_5 %}</div>
             </div>
             <div class="col-2 offset-2 col-md-2 offset-md-2 d-flex align-items-center flex-column">
                 <nav class='footer-menu'>
                     <ul>
-                        {% for menu in menus %}
+                        {% for menu_item in menu %}
 
-                            <li class="{% if request.path_info == menu.get_absolute_url %} activ {% endif %}"><a
-                                    href="{{ menu.get_absolute_url }}">{{ menu.name }}</a>
+                            <li class="{% if request.path_info == menu_item.get_absolute_url %} activ {% endif %}"><a
+                                    href="{{ menu_item.get_absolute_url }}">{{ menu_item.name }}</a>
 
                             </li>
 
