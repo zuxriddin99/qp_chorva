@@ -1,7 +1,5 @@
 from modeltranslation.translator import translator, TranslationOptions
 from .models import AboutPage, OurAdvantage, ContactPage, PartnerPage, CatalogPage, Menu
-from django.utils.translation import gettext_lazy as _
-from qp_chorva.myconstanse import *
 
 
 class AboutPageTranslationOption(TranslationOptions):
@@ -44,10 +42,3 @@ class MenuTranslationOption(TranslationOptions):
 
 
 translator.register(Menu, MenuTranslationOption)
-
-
-# class CONSTANCE_CONFIGTranslationOption(TranslationOptions):
-#     fields = ('TITLE_INDEX',)
-#
-#
-# translator.register(CONSTANCE_CONFIG, CONSTANCE_CONFIGTranslationOption)

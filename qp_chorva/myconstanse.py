@@ -1,5 +1,3 @@
-from django.utils.translation import gettext_lazy as _
-
 CONSTANCE_CONFIG = {
     'TITLE_INDEX_uz': ('Bosh sahifa', 'title'),
     'TITLE_INDEX_ru': ('Главная', 'title'),
@@ -12,7 +10,7 @@ CONSTANCE_CONFIG = {
         "Biz loyihamiz va juda uzoq vaqtdan beri o'z biznesimiz bilan shug'ullanmoqdamiz, biz 032035 yil davomida u va bu narsani ishlab chiqaramiz va biz raqobatchilarimiz orasida bozorda eng yaxshisimiz.",
         'Header text '),
     'MAIN_1_en': (
-        "We are a project and have been doing our business for a very long time, we have been producing this and that for 032035 years and we the best on the market among our competitors.ida bozorda eng yaxshisimiz.",
+        "We are a project and have been doing our business for a very long time, we have been producing this and that for 032035 years and we the best on the market among our competitors.",
         'Header text '),
     'MAIN_2_ru': ('НАША ПРОДУКЦИЯ', 'Header button'),
     'MAIN_2_uz': ('BIZNING MAXSULOTLAR', 'Header button'),
@@ -265,39 +263,6 @@ CONSTANCE_CONFIG = {
     'BASE_5_en': ('2004 - 2020', ' '),
 }
 
-# CONSTANCE_CONFIG_FIELDSETS = {
-#     'Main page': {
-#         'fields': (
-#             'TITLE_INDEX', 'MAIN_1', 'MAIN_2', 'MAIN_3', 'MAIN_4', 'MAIN_5', 'MAIN_6', 'MAIN_7', 'MAIN_8', 'MAIN_9',
-#             'MAIN_10', 'MAIN_11',
-#             'MAIN_12', 'MAIN_13', 'MAIN_14', 'MAIN_15'),
-#         'collapse': True
-#     },
-# # 'AboutPage': {
-# #     'fields': ("ABOUT_1", "ABOUT_2", "ABOUT_3", "ABOUT_4", "ABOUT_5", "ABOUT_6", "ABOUT_7", "ABOUT_8", "ABOUT_9",
-# #                "TITLE_ABOUT",),
-# #     'collapse': True, },
-# #
-# # 'CatalogPage': {
-# #     'fields': (
-# #         'TITLE_CATALOG', 'CATALOG_2', 'CATALOG_3', 'CATALOG_4', 'CATALOG_5', 'CATALOG_6', 'CATALOG_7', 'CATALOG_8',
-# #         'CATALOG_9', 'CATALOG_10',),
-# #     'collapse': True, },
-# # 'ContactPage': {
-# #     'fields': (
-# #         'CONTACT_TITLE', 'CONTACT_1', 'CONTACT_2', 'CONTACT_3', 'CONTACT_4', 'CONTACT_5', 'CONTACT_6', 'CONTACT_7',
-# #         'CONTACT_8', 'CONTACT_9', 'CONTACT_10', 'CONTACT_11', 'CONTACT_12', 'CONTACT_13', 'CONTACT_14',),
-# #     'collapse': True,
-# # },
-# # 'PartnerPage': {
-# #     'fields': (
-# #         'PARTNER_TITLE', 'PARTNER_1', 'PARTNER_2', 'PARTNER_3', 'PARTNER_4', 'PARTNER_5', 'PARTNER_6',
-# #         'PARTNER_7',),
-# #     'collapse': True,
-# # },
-
-# }
-
 CONSTANCE_CONFIG_FIELDSETS = {
     'MainPage': (
         'TITLE_INDEX_ru', 'TITLE_INDEX_uz', 'TITLE_INDEX_en',
@@ -379,3 +344,101 @@ CONSTANCE_CONFIG_FIELDSETS = {
     ),
 
 }
+#
+# CONSTANCE_CONFIG_FIELDSETS = {
+#     'Main Page Items': {
+#         'fields': (
+#             'TITLE_INDEX_ru', 'TITLE_INDEX_uz', 'TITLE_INDEX_en',
+#             'MAIN_1_ru', 'MAIN_1_uz', 'MAIN_1_en',
+#             'MAIN_2_ru', 'MAIN_2_uz', 'MAIN_2_en',
+#             'MAIN_3_ru', 'MAIN_3_uz', 'MAIN_3_en',
+#             'MAIN_4_ru', 'MAIN_4_uz', 'MAIN_4_en',
+#             'MAIN_5_ru', 'MAIN_5_uz', 'MAIN_5_en',
+#             'MAIN_6_ru', 'MAIN_6_uz', 'MAIN_6_en',
+#             'MAIN_7_ru', 'MAIN_7_uz', 'MAIN_7_en',
+#             'MAIN_8_ru', 'MAIN_8_uz', 'MAIN_8_en',
+#             'MAIN_9_ru', 'MAIN_9_uz', 'MAIN_9_en',
+#             'MAIN_10_ru', 'MAIN_10_uz', 'MAIN_10_en',
+#             'MAIN_11_ru', 'MAIN_11_uz', 'MAIN_11_en',
+#             'MAIN_12_ru', 'MAIN_12_uz', 'MAIN_12_en',
+#             'MAIN_13_ru', 'MAIN_13_uz', 'MAIN_13_en',
+#             'MAIN_14_ru', 'MAIN_14_uz', 'MAIN_14_en',
+#             'MAIN_15_ru', 'MAIN_15_uz', 'MAIN_15_en',
+#         ),
+#         'collapse': True
+#     },
+#     'Abouts Page Items': {
+#         'fields': (
+#             "ABOUT_1_ru", "ABOUT_1_uz", "ABOUT_1_en",
+#             "ABOUT_2_ru", "ABOUT_2_uz", "ABOUT_2_en",
+#             "ABOUT_3_ru", "ABOUT_3_uz", "ABOUT_3_en",
+#             "ABOUT_4_ru", "ABOUT_4_uz", "ABOUT_4_en",
+#             "ABOUT_5_ru", "ABOUT_5_uz", "ABOUT_5_en",
+#             "ABOUT_6_ru", "ABOUT_6_uz", "ABOUT_6_en",
+#             "ABOUT_7_ru", "ABOUT_7_uz", "ABOUT_7_en",
+#             "ABOUT_8_ru", "ABOUT_8_uz", "ABOUT_8_en",
+#             "ABOUT_9_ru", "ABOUT_9_uz", "ABOUT_9_en",
+#             "TITLE_ABOUT_ru", "TITLE_ABOUT_uz", "TITLE_ABOUT_en",
+#         ),
+#         'collapse': True
+#     },
+#     'Catalog Page Items': {
+#         'fields': (
+#             'TITLE_CATALOG_ru', 'TITLE_CATALOG_uz', 'TITLE_CATALOG_en',
+#             'CATALOG_2_ru', 'CATALOG_2_uz', 'CATALOG_2_en',
+#             'CATALOG_3_ru', 'CATALOG_3_uz', 'CATALOG_3_en',
+#             'CATALOG_4_ru', 'CATALOG_4_uz', 'CATALOG_4_en',
+#             'CATALOG_5_ru', 'CATALOG_5_uz', 'CATALOG_5_en',
+#             'CATALOG_6_ru', 'CATALOG_6_uz', 'CATALOG_6_en',
+#             'CATALOG_7_ru', 'CATALOG_7_uz', 'CATALOG_7_en',
+#             'CATALOG_8_ru', 'CATALOG_8_uz', 'CATALOG_8_en',
+#             'CATALOG_9_ru', 'CATALOG_9_uz', 'CATALOG_9_en',
+#             'CATALOG_10_ru', 'CATALOG_10_uz', 'CATALOG_10_en',
+#         ),
+#         'collapse': True
+#     },
+#     'Contact Page Items': {
+#         'fields': (
+#             'CONTACT_TITLE_ru', 'CONTACT_TITLE_uz', 'CONTACT_TITLE_en',
+#             'CONTACT_1_ru', 'CONTACT_1_uz', 'CONTACT_1_en',
+#             'CONTACT_2_ru', 'CONTACT_2_uz', 'CONTACT_2_en',
+#             'CONTACT_3_ru', 'CONTACT_3_uz', 'CONTACT_3_en',
+#             'CONTACT_4_ru', 'CONTACT_4_uz', 'CONTACT_4_en',
+#             'CONTACT_5_ru', 'CONTACT_5_uz', 'CONTACT_5_en',
+#             'CONTACT_6_ru', 'CONTACT_6_uz', 'CONTACT_6_en',
+#             'CONTACT_7_ru', 'CONTACT_7_uz', 'CONTACT_7_en',
+#             'CONTACT_8_ru', 'CONTACT_8_uz', 'CONTACT_8_en',
+#             'CONTACT_9_ru', 'CONTACT_9_uz', 'CONTACT_9_en',
+#             'CONTACT_10_ru', 'CONTACT_10_uz', 'CONTACT_10_en',
+#             'CONTACT_11_ru', 'CONTACT_11_uz', 'CONTACT_11_en',
+#             'CONTACT_12_ru', 'CONTACT_12_uz', 'CONTACT_12_en',
+#             'CONTACT_13_ru', 'CONTACT_13_uz', 'CONTACT_13_en',
+#             'CONTACT_14_ru', 'CONTACT_14_uz', 'CONTACT_14_en',
+#         ),
+#         'collapse': True
+#     },
+#     'Partner Page Items': {
+#         'fields': (
+#             'PARTNER_TITLE_ru', 'PARTNER_TITLE_uz', 'PARTNER_TITLE_en',
+#             'PARTNER_1_ru', 'PARTNER_1_uz', 'PARTNER_1_en',
+#             'PARTNER_2_ru', 'PARTNER_2_uz', 'PARTNER_2_en',
+#             'PARTNER_3_ru', 'PARTNER_3_uz', 'PARTNER_3_en',
+#             'PARTNER_4_ru', 'PARTNER_4_uz', 'PARTNER_4_en',
+#             'PARTNER_5_ru', 'PARTNER_5_uz', 'PARTNER_5_en',
+#             'PARTNER_6_ru', 'PARTNER_6_uz', 'PARTNER_6_en',
+#             'PARTNER_7_ru', 'PARTNER_7_uz', 'PARTNER_7_en',
+#         ),
+#         'collapse': True
+#     },
+#     'Base Items': {
+#         'fields': (
+#             'BASE_1_ru', 'BASE_1_uz', 'BASE_1_en',
+#             'BASE_2_ru', 'BASE_2_uz', 'BASE_2_en',
+#             'BASE_3_ru', 'BASE_3_uz', 'BASE_3_en',
+#             'BASE_4_ru', 'BASE_4_uz', 'BASE_4_en',
+#             'BASE_5_ru', 'BASE_5_uz', 'BASE_5_en',
+#         ),
+#         'collapse': True
+#     },
+#
+# }

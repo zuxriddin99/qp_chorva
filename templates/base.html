@@ -11,8 +11,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Roboto:wght@300;400;500;700&display=swap"
           rel="stylesheet">
     <title>{% block title %}{% endblock %}</title>
+
+    <style>
+
+        .dropbtn {
+            background-color: black;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightgrey;
+            min-width: 200px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: grey;
+        }
+
+    </style>
+
 </head>
 <body>
+
 <section class="{% block bg_image %} {% endblock %}">
     <header>
         <div class="container">
@@ -32,39 +78,54 @@
                 {% for menu_item in menu %}
 
                     {% if menu_item.url == 'partner' %}
-                        <button class='menu-btn'><a href="{{ menu_item.get_absolute_url }}">{{ menu_item.name }}</a>
-                        </button>
+                        <a href="{{ menu_item.get_absolute_url }}">
+                            <button class='menu-btn' style="color: #FAFAFE">{{ menu_item.name }}
+                            </button>
+                        </a>
                     {% endif %}
 
                 {% endfor %}
 
                 <ul class='lang '>
-                    <li>
-                        RU<i class="fa fa-chevron-down" aria-hidden="true">
 
-                    </i>
-                    </li>
                     <li>
 
-                        <div class='lang ' >
 
-                            {% get_current_language as LANGUAGE_CODE %}
-                            {% get_available_languages as LANGUAGES %}
-                            {% get_language_info_list for LANGUAGES as languages %}
-                            <div class="languages">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        <div class="languages">
 
-                                <ul class="languages">
-                                    {% for language in languages %}
-                                        <li>
-                                            <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %}
-                                               class="selected"{% endif %}>
-                                                {{ language.code }}
-                                            </a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+                            <ul class="lang">
+
+                                <div style="background: none" class="dropdown">
+
+                                    <b>
+                                        <button style="background: none; font-size: 25px; font-style: italic"
+                                                class="dropbtn">{{ LANGUAGE_CODE|upper }}<i class="fa fa-chevron-down"
+                                                                                            aria-hidden="true"></i>
+                                        </button>
+                                    </b>
+                                    <div class="dropdown-content" style="background: inherit">
+                                        {% for language in languages %}
+
+
+                                            <li style="background: none">
+                                                <u><a style="background: none; font-size: 25px; color: #FAFAFE"
+                                                      href="/{{ language.code }}/"
+                                                        {% if language.code == LANGUAGE_CODE %}
+                                                      class="selected"{% endif %}>{{ language.code|upper }}</a></u>
+                                            </li>
+
+
+
+                                        {% endfor %}
+                                    </div>
+                                </div>
+
+                            </ul>
                         </div>
+
                     </li>
 
 

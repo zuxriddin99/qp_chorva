@@ -15,3 +15,4 @@ def even(id):
 @register.filter
 def translate(name, url):
     return config.__getattr__(name + url.split('/')[1])
+

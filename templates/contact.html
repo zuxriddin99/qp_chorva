@@ -21,11 +21,11 @@
                 <div class="contacts-descr">
                     {{ 'CONTACT_2_'|translate:request.path }}
                     <br><br>
-                   {{ 'CONTACT_3_'|translate:request.path }}
+                    {{ 'CONTACT_3_'|translate:request.path }}
                     <br><br>
                     {{ 'CONTACT_4_'|translate:request.path }}
                     <br><br>
-                   {{ 'CONTACT_5_'|translate:request.path }}
+                    {{ 'CONTACT_5_'|translate:request.path }}
                     <br><br>
                     {{ 'CONTACT_6_'|translate:request.path }}
                 </div>
@@ -36,18 +36,22 @@
                     <form action="{% url 'contactus' %}" method="post">
                         {% csrf_token %}
                         <div class="form-group">
-                            <input type="text" class="form-control" id='name' placeholder="{{ 'CONTACT_8_'|translate:request.path }}"
+                            <input type="text" class="form-control" id='name'
+                                   placeholder="{{ 'CONTACT_8_'|translate:request.path }}"
                                    name="name">
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" id='tel' placeholder="{{ 'CONTACT_9_'|translate:request.path }}"
+                            <input type="number" class="form-control" id='tel'
+                                   placeholder="{{ 'CONTACT_9_'|translate:request.path }}"
                                    name="number">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id='message' placeholder="{{ 'CONTACT_10_'|translate:request.path }}"
+                            <input type="text" class="form-control" id='message'
+                                   placeholder="{{ 'CONTACT_10_'|translate:request.path }}"
                                    name="message">
                         </div>
-                        <button type="submit" class="btn btn-primary">{{ 'CONTACT_11_'|translate:request.path }}</button>
+                        <button type="submit"
+                                class="btn btn-primary">{{ 'CONTACT_11_'|translate:request.path }}</button>
                     </form>
 
                 </div>
@@ -85,7 +89,7 @@
 
                                 </div>
                                 <div class="block-text">
-                                    {{ contact.text}}
+                                    {{ contact.text }}
                                 </div>
                             </div>
                         </div>
@@ -102,10 +106,17 @@
             <div class="map-title">
                 {{ 'CONTACT_13_'|translate:request.path }}
             </div>
-
-            <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">
-                <button>{{ 'CONTACT_14_'|translate:request.path }}</button>
+            <div style="position:relative;overflow:hidden;"><a
+                    href="https://yandex.uz/maps/21105/urgench/?utm_medium=mapframe&utm_source=maps"
+                    style="color:#eee;font-size:12px;position:absolute;top:0px;">Ургенч</a><a
+                    href="https://yandex.uz/maps/21105/urgench/?l=sat&ll=60.632401%2C41.549815&utm_medium=mapframe&utm_source=maps&z=16"
+                    style="color:#eee;font-size:12px;position:absolute;top:14px;">Ургенч — Яндекс.Карты</a>
+                <iframe src="https://yandex.uz/map-widget/v1/-/CCUAiShvxC" width="100%" height="500" frameborder="1"
+                        allowfullscreen="true" style="position:relative;"></iframe>
             </div>
+{#            <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">#}
+{#                <button>{{ 'CONTACT_14_'|translate:request.path }}</button>#}
+{#            </div>#}
         </div>
     </section>
 {% endblock %}
