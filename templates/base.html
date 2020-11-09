@@ -52,7 +52,7 @@
                                 {% get_available_languages as LANGUAGES %}
                                 {% get_language_info_list for LANGUAGES as languages %}
                                 {% for language in languages %}
-                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                    <option type="submit" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
                                             selected{% endif %}>
                                         {{ language.code }}
                                     </option>
@@ -134,7 +134,7 @@
                     {{ config.BASE_3 }}
                 </div>
                 <div class="footer-end">
-                    {{ config.BASE_1 }}
+                    {{ config.BASE_4 }}
                 </div>
             </div>
         </div>

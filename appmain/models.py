@@ -102,6 +102,10 @@ class Menu(models.Model):
     name = models.CharField(max_length=100)
     url = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name = 'Меню'
+        verbose_name_plural = 'Меню'
+
     def get_absolute_url(self):
         return reverse(self.url)
 
