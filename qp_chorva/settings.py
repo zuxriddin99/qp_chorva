@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 from django.contrib.messages import constants as messages
 from constance.signals import config_updated
-from .myconstanse import  *
+from .myconstanse import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -72,6 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'appmain.context_processors.myview',
+
             ],
         },
     },

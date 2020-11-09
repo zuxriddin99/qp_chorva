@@ -3,7 +3,7 @@
 {% load static tags %}
 
 {% block title %}
-    {{ config.TITLE_A }}
+    {{ config.TITLE_ABOUT }}
 {% endblock %}
 
 {% block bg_image %}
@@ -46,7 +46,7 @@
     <section class="history">
         <div class="container">
 
-            <div class="history-label">{{ config.ABOUT_3 }}</div>
+            <div class="history-label">{{ 'ABOUT_3_'|translate:request.path }}</div>
             {% for ab in aboutpage %}
                 {% if forloop.counter|even %}
                     <div class="history-block">

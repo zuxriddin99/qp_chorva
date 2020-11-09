@@ -37,32 +37,36 @@
 
                 {% endfor %}
 
-
-
                 <ul class='lang '>
                     <li>
                         RU<i class="fa fa-chevron-down" aria-hidden="true">
 
                     </i>
+                    </li>
                     <li>
-                        <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                            <input name="next" type="hidden" value="{{ redirect_to }}">
-                            <select name="language">
-                                {% get_current_language as LANGUAGE_CODE %}
-                                {% get_available_languages as LANGUAGES %}
-                                {% get_language_info_list for LANGUAGES as languages %}
-                                {% for language in languages %}
-                                    <option type="submit" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
-                                            selected{% endif %}>
-                                        {{ language.code }}
-                                    </option>
-                                {% endfor %}
-                            </select>
-                            <input type="submit" value="Go">
-                        </form>
+
+                        <div class='lang ' >
+
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            <div class="languages">
+
+                                <ul class="languages">
+                                    {% for language in languages %}
+                                        <li>
+                                            <a href="/{{ language.code }}/" {% if language.code == LANGUAGE_CODE %}
+                                               class="selected"{% endif %}>
+                                                {{ language.code }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
                     </li>
 
-                    </li>
+
                 </ul>
 
             </nav>
@@ -128,7 +132,10 @@
                     </ul>
                 </div>
                 <div class="footer-phone">
-                    {{ config.BASE_2 }}
+                    {% if 'ru' == LANGUAGE_CODE %}
+                        {{ config.BASE_2 }}
+
+                    {% endif %}
                 </div>
                 <div class="footer-tel">
                     {{ config.BASE_3 }}
