@@ -3,36 +3,33 @@ CONSTANCE_CONFIG = {
     'TITLE_INDEX_ru': ('Главная', 'title'),
     'TITLE_INDEX_en': ('Home', 'title'),
     'MAIN_1_ru': (
-        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
-        'лучшие на рынке среди наших конкурентов. ',
-        'Header text '),
+        'Наша компания уже много лет обеспечивает население качественными яйцами и куриным мясом. ', 'Header text '),
     'MAIN_1_uz': (
-        "Biz loyihamiz va juda uzoq vaqtdan beri o'z biznesimiz bilan shug'ullanmoqdamiz, biz 032035 yil davomida u va bu narsani ishlab chiqaramiz va biz raqobatchilarimiz orasida bozorda eng yaxshisimiz.",
+        "Kompaniyamiz ko'p yillardan buyon aholini sifatli tuxum va tovuq go'shti bilan ta'minlab keladi.",
         'Header text '),
     'MAIN_1_en': (
-        "We are a project and have been doing our business for a very long time, we have been producing this and that for 032035 years and we the best on the market among our competitors.",
+        " Our company has been providing the population with high-quality eggs and chicken meat for many years.",
         'Header text '),
     'MAIN_2_ru': ('НАША ПРОДУКЦИЯ', 'Header button'),
     'MAIN_2_uz': ('BIZNING MAXSULOTLAR', 'Header button'),
-    'MAIN_2_en': ('OUR PRODUCTION', 'Header button'),
+    'MAIN_2_en': ('OUR PRODUCTS', 'Header button'),
     'MAIN_3_ru': ('О нас', 'About us'),
     'MAIN_3_uz': ('Biz haqimizda', 'About us'),
     'MAIN_3_en': ('About us', 'About us'),
     'MAIN_4_ru': (
-        'Мы - проект и занимаемся нашим делом уже очень давномы производим то-то то-то уже в течении 032035 лет и мы '
-        'лучшие на рынке среди наших конкурентов. ',
+        '«Кушкупир Парранда» - это крупнейшее предприятие в Хорезмской области, обеспечивающий потребителей широкой линейкой высококачественных продуктов.',
         'about us text '),
     'MAIN_4_uz': (
-        "Biz loyihamiz va juda uzoq vaqtdan beri o'z biznesimiz bilan shug'ullanmoqdamiz, biz 032035 yil davomida u va bu narsani ishlab chiqaramiz va biz raqobatchilarimiz orasida bozorda eng yaxshisimiz.",
+        "«Kushkupir Parranda» Xorazm viloyatidagi eng yirik korxona bo'lib, xaridorlarga yuqori sifatli mahsulotlarni keng assortimenti bilan ta'minlaydi.",
         'about us text '),
     'MAIN_4_en': (
-        "We are a project and have been doing our business for a very long time, we have been producing this and that for 032035 years and we the best on the market among our competitors.ida bozorda eng yaxshisimiz.",
+        "«Kushkupir Parranda» is the largest enterprise in the Khorezm region, providing consumers with a wide range of high-quality products.",
         'about us text '),
     'MAIN_5_ru': ('ПОДРОБНЕЕ', 'button'),
     'MAIN_5_uz': ("KO'PROQ O'QING", 'button'),
     'MAIN_5_en': ('READ MORE', 'button'),
     'MAIN_6_ru': ('Мы производим', 'button'),
-    'MAIN_6_uz': ('Biz ishlab chiqaramiz', 'button'),
+    'MAIN_6_uz': ('Bizning maxsulotlar', 'button'),
     'MAIN_6_en': ('We produce', 'button'),
     'MAIN_7_ru': ('ЭКСПОРТ И ИМПОРТ', 'button'),
     'MAIN_7_uz': ('EKSPORT VA IMPORT', 'button'),
@@ -92,22 +89,22 @@ CONSTANCE_CONFIG = {
     'ABOUT_5_uz': ('2020 yil', 'Title'),
     'ABOUT_5_en': ('2020 year', 'Title'),
     'ABOUT_6_ru': (
-        'Убой бройлерных кур (1500-2000) голов и захват рынка, поставки за границу и расширение наших границ.',
+        'В 2020 году на базе птицефабрики был запущен новый завод по переработке мяса птицы его проектная мощность – 1500-2000 голов в час. Процесс производства и убой цыплят-бройлеров отвечают самым высоким международным гигиеническим и техническим стандартам. Также автоматизирована транспортировка птиц из птичника.',
         'Text 1'),
     'ABOUT_6_uz': (
-        "Broyler tovuqlarini (1500-2000) so'yish va bozorni egallash, chet elga etkazib berish va chegaralarimizni kengaytirish.",
+        "2020-yilda parrandachilik fermasi negizida yangi parranda go'shtini qayta ishlash zavodi ishga tushirildi, uning loyihalashtirish quvvati soatiga 1500-2000 boshni tashkil etadi. Broyler tovuqlarini ishlab chiqarish va so'yish jarayoni eng yuqori xalqaro gigiena va texnik standartlarga javob beradi. Uydan qushlarni tashish ham avtomatlashtirilgan.",
         'Text 1'),
     'ABOUT_6_en': (
-        'Slaughter of broiler chickens (1500-2000) heads and capture of the market, supply abroad and expansion of our borders.',
+        'In 2020, a new poultry meat processing plant was launched on the basis of a poultry farm, its project capacity is 1500-2000 heads per hour. The production process and slaughter of broiler chickens meet the highest international hygiene and technical standards. ',
         'Text 1'),
     'ABOUT_7_ru': (
-        'Мы - компания с долгой историей развития и нам вы можете доверять. Мы отвечаем за качество нашего продукта.',
+        'Куриное мясо отличается качеством, проходит строгую систему контроля и соответствует требованиям продовольственной безопасности страны. Куры не содержат ГМО, что очень важно для тех, кто заботится о своём здоровье.',
         'text 2'),
     'ABOUT_7_uz': (
-        "Biz uzoq rivojlanish tarixiga ega bo'lgan kompaniyamiz va bizga ishonishingiz mumkin. Biz mahsulotimiz sifati uchun javob beramiz.",
+        "Tovuq go'shti yuqori sifatli, qattiq nazorat tizimidan o'tgan va mamlakatning oziq-ovqat xavfsizligi talablariga javob beradi. Tovuqlarda GMO mavjud emas, bu ularning sog'lig'iga g'amxo'rlik qiladiganlar uchun juda muhimdir.",
         'text 2'),
     'ABOUT_7_en': (
-        'We are a company with a long history of development and you can trust us. We are responsible for the quality of our product.',
+        'The transportation of birds from the poultry house is also automated. Chicken meat is of high quality, undergoes a strict control system and meets the food safety requirements of the country. Chickens do not contain GMOs, which is very important for those who care about their health.',
         'text 2'),
     'ABOUT_8_ru': ('СВЯЗАТЬСЯ С НАМИ', 'button'),
     'ABOUT_8_uz': ("BIZ BILAN BOG'LANISH", 'button'),

@@ -138,8 +138,8 @@
                     <div class="present-descr">
                         {{ 'ABOUT_6_'|translate:request.path }}
                         <br>
-                        <br>
-                        {{ 'ABOUT_7_'|translate:request.path }}
+
+
 
                     </div>
                 </div>
@@ -157,13 +157,13 @@
                 {{ 'ABOUT_9_'|translate:request.path }}
             </div>
             <div class="advant-blocks">
-                <div class="row">
+                <div class="row mt-5">
                     {% for advant in advantage %}
-                        <div style="margin-bottom: 25px" class="col-4 col-md-4">
+                        <div style="margin-bottom: 25px; " class="col-4 col-md-4">
                             <div class="block-item"
                                  style='background: url({{ advant.image_2.url }}) center center/cover no-repeat;'>
                                 <div class="block-icon">
-                                    <img src="{{ advant.image }}" alt="">
+                                    <img src="{{advant.image.url}}" alt="">
                                 </div>
                                 <div class="block-text">
                                     {{ advant.text }}

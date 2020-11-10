@@ -83,11 +83,11 @@
                         <div class="col-6 col-md-4">
                             <div class="block-item"
                                  style='background: url({{ contact.image.url }}) center center/cover no-repeat;'>
-                                <div class="block-icons">
-                                    <img src="{% static 'img/02.png' %}" alt="">
-                                    <img src="{% static 'img/clock.png' %}" alt="">
-
-                                </div>
+{#                                <div class="block-icons">#}
+{#                                    <img src="{% static 'img/02.png' %}" alt="">#}
+{#                                    <img src="{% static 'img/clock.png' %}" alt="">#}
+{##}
+{#                                </div>#}
                                 <div class="block-text">
                                     {{ contact.text }}
                                 </div>
@@ -114,9 +114,7 @@
                 <iframe src="https://yandex.uz/map-widget/v1/-/CCUAiShvxC" width="100%" height="500" frameborder="1"
                         allowfullscreen="true" style="position:relative;"></iframe>
             </div>
-{#            <div class="map-img" style="background: url({% static 'img/map.png' %}) center center/cover no-repeat;">#}
-{#                <button>{{ 'CONTACT_14_'|translate:request.path }}</button>#}
-{#            </div>#}
+
         </div>
     </section>
 {% endblock %}
