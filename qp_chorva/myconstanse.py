@@ -17,13 +17,13 @@ CONSTANCE_CONFIG = {
     'MAIN_3_uz': ('Biz haqimizda', 'About us'),
     'MAIN_3_en': ('About us', 'About us'),
     'MAIN_4_ru': (
-        '«Кушкупир Парранда» - это крупнейшее предприятие в Хорезмской области, обеспечивающий потребителей широкой линейкой высококачественных продуктов.',
+        "«QO'SHKO'PIR PARRANDA» - это крупнейшее предприятие в Хорезмской области, обеспечивающий потребителей широкой линейкой высококачественных продуктов.",
         'about us text '),
     'MAIN_4_uz': (
-        "«Kushkupir Parranda» Xorazm viloyatidagi eng yirik korxona bo'lib, xaridorlarga yuqori sifatli mahsulotlarni keng assortimenti bilan ta'minlaydi.",
+        "«QO'SHKO'PIR PARRANDA» Xorazm viloyatidagi eng yirik korxona bo'lib, xaridorlarni yuqori sifatli mahsulotlarning keng assortimenti bilan ta'minlaydi.",
         'about us text '),
     'MAIN_4_en': (
-        "«Kushkupir Parranda» is the largest enterprise in the Khorezm region, providing consumers with a wide range of high-quality products.",
+        "«QO'SHKO'PIR PARRANDA» is the largest enterprise in the Khorezm region, providing consumers with a wide range of high-quality products.",
         'about us text '),
     'MAIN_5_ru': ('ПОДРОБНЕЕ', 'button'),
     'MAIN_5_uz': ("KO'PROQ O'QING", 'button'),
@@ -45,7 +45,7 @@ CONSTANCE_CONFIG = {
     'MAIN_10_en': ('Our contacts', 'contact'),
     'MAIN_11_ru': ('Адрес: Республика Узбекистан, Хорезмская область, Кушкупирский район село Узбекяп.', 'address'),
     'MAIN_11_uz': (
-        "Manzil: O'zbekiston Respublikasi, Xorazm viloyati, Qushko'pir tumani, O'zbekyap qishlog'i.", 'address'),
+        "Manzil: O'zbekiston Respublikasi, Xorazm viloyati, Qo'shko'pir tumani, O'zbekyop qishlog'i.", 'address'),
     'MAIN_11_en': ('Address: Republic of Uzbekistan, Khorezm region, Kushkupir district, village Uzbekyap.', 'address'),
     'MAIN_12_ru': ('Банк: Хорезмский региональный филиал АК «УзПромстройбанка».', 'Bank info'),
     'MAIN_12_uz': ("Bank: «O'zsanoatqurilishbank» ATB Xorazm viloyati filiali.", 'Bank info'),
@@ -72,7 +72,7 @@ CONSTANCE_CONFIG = {
         'header'),
     'ABOUT_2_ru': ('Мы - лучшие в нашем деле и мы активноразвиваемся и расширяемся с 2004 года.', 'header 2 '),
     'ABOUT_2_uz': (
-        "Biz o'z biznesimizdagi eng zo'rimiz va 2004 yildan beri faol rivojlanib va ​​kengayib kelmoqdamiz.",
+        "Biz o'z biznesimizdagi eng zo'rimiz va 2004 yildan beri faol ravishda rivojlanib va ​​kengayib kelmoqdamiz.",
         'header 2 '),
     'ABOUT_2_en': (
         'We are the best in our business and we have been actively developing and expanding since 2004.', 'header 2 '),
@@ -92,7 +92,7 @@ CONSTANCE_CONFIG = {
         'В 2020 году на базе птицефабрики был запущен новый завод по переработке мяса птицы его проектная мощность – 1500-2000 голов в час. Процесс производства и убой цыплят-бройлеров отвечают самым высоким международным гигиеническим и техническим стандартам. Также автоматизирована транспортировка птиц из птичника.',
         'Text 1'),
     'ABOUT_6_uz': (
-        "2020-yilda parrandachilik fermasi negizida yangi parranda go'shtini qayta ishlash zavodi ishga tushirildi, uning loyihalashtirish quvvati soatiga 1500-2000 boshni tashkil etadi. Broyler tovuqlarini ishlab chiqarish va so'yish jarayoni eng yuqori xalqaro gigiena va texnik standartlarga javob beradi. Uydan qushlarni tashish ham avtomatlashtirilgan.",
+        "2020-yilda parrandachilik fermasi negizida yangi parranda go'shtini qayta ishlash zavodi ishga tushirildi, uning loyihalashtirish quvvati soatiga 1500-2000 boshni tashkil etadi. Broyler tovuqlarini ishlab chiqarish va so'yish jarayoni eng yuqori xalqaro gigiyena va texnik standartlarga javob beradi. Unda qushlarni tashish ham avtomatlashtirilgan.",
         'Text 1'),
     'ABOUT_6_en': (
         'In 2020, a new poultry meat processing plant was launched on the basis of a poultry farm, its project capacity is 1500-2000 heads per hour. The production process and slaughter of broiler chickens meet the highest international hygiene and technical standards. ',
@@ -101,7 +101,7 @@ CONSTANCE_CONFIG = {
         'Куриное мясо отличается качеством, проходит строгую систему контроля и соответствует требованиям продовольственной безопасности страны. Куры не содержат ГМО, что очень важно для тех, кто заботится о своём здоровье.',
         'text 2'),
     'ABOUT_7_uz': (
-        "Tovuq go'shti yuqori sifatli, qattiq nazorat tizimidan o'tgan va mamlakatning oziq-ovqat xavfsizligi talablariga javob beradi. Tovuqlarda GMO mavjud emas, bu ularning sog'lig'iga g'amxo'rlik qiladiganlar uchun juda muhimdir.",
+        "Tovuq go'shti yuqori sifatli, qattiq nazorat tizimidan o'tgan va mamlakatning oziq-ovqat xavfsizligi talablariga javob beradi. Tovuqlarda GMO mavjud emas, bu esa o'z sog'lig'iga g'amxo'rlik qiladiganlar uchun juda muhimdir.",
         'text 2'),
     'ABOUT_7_en': (
         'The transportation of birds from the poultry house is also automated. Chicken meat is of high quality, undergoes a strict control system and meets the food safety requirements of the country. Chickens do not contain GMOs, which is very important for those who care about their health.',
@@ -131,7 +131,7 @@ CONSTANCE_CONFIG = {
         'Our products and services of our company, thanks to our experience and quality, can boast the title of the best in Uzbekistan.',
         'Header 2'),
     'CATALOG_4_ru': ('НАША ПРОДУКЦИЯ', 'button'),
-    'CATALOG_4_uz': ('Bizning ishlab chiqarish', 'button'),
+    'CATALOG_4_uz': ('Bizning maxsulotlar', 'button'),
     'CATALOG_4_en': ('OUR PRODUCTION', 'button'),
     'CATALOG_5_ru': ('Мы продаём и доставляем', 'selling'),
     'CATALOG_5_uz': ('Biz sotamiz va etkazib beramiz', 'selling'),
@@ -140,13 +140,13 @@ CONSTANCE_CONFIG = {
     'CATALOG_6_uz': ('Bizning mahsulotlarimiz yaxshi tanlovdir', 'our product'),
     'CATALOG_6_en': ('Our products are a good choice', 'our product'),
     'CATALOG_7_ru': ('Почему же наша продукция хороший выбор?', 'cause of choice '),
-    'CATALOG_7_uz': ('Nima uchun bizning mahsulotlarimiz yaxshi tanlovdir?', 'cause of choice '),
+    'CATALOG_7_uz': ('Nima uchun bizning mahsulotlarimiz yaxshi tanlov?', 'cause of choice '),
     'CATALOG_7_en': ('Why are our products a good choice?', 'cause of choice '),
     'CATALOG_8_ru': (
         'Мы уже более 16 лет на рынке и наша фирма имеет огромный масштаб и мы не хотим на этом останавливаться.',
         'cause of choice'),
     'CATALOG_8_uz': (
-        "Biz bozorda 16 yildan buyon faoliyat yuritmoqdamiz va bizning kompaniyamiz katta hajmga ega va biz bu erda to'xtamoqchi emasmiz.",
+        "Biz bozorda 16 yildan buyon faoliyat yuritmoqdamiz va bizning kompaniyamiz katta hajmga ega va biz bu yo'lda to'xtamoqchi emasmiz.",
         'cause of choice'),
     'CATALOG_8_en': (
         'We have been on the market for over 16 years and our company has a huge scale and we do not want to stop there.',
@@ -188,7 +188,7 @@ CONSTANCE_CONFIG = {
     'CONTACT_6_uz': ('Direktor: U.Y. Madaminov', 'header 6'),
     'CONTACT_6_en': ('Director: U.Y. Madaminov', 'header 6'),
     'CONTACT_7_ru': ('Оставьте заявку', ' forma title'),
-    'CONTACT_7_uz': ("So'rov qoldiring", ' forma title'),
+    'CONTACT_7_uz': ("So'rov qoldirish", ' forma title'),
     'CONTACT_7_en': ('Leave a request', ' forma title'),
     'CONTACT_8_ru': ('Имя*', 'forma name'),
     'CONTACT_8_uz': ('Ism*', 'forma name'),
